@@ -16,7 +16,7 @@
     header{            
         background-color: yellow;
         height: 350px;
-        background-image: url(../images/cafe1.PNG);
+        background-image: url(images/cafe1.PNG);
         background-size: cover;
     }
     nav{
@@ -73,21 +73,21 @@
         
     }
     #info >.photo{
-      background-image: url(../images/cafe2.PNG);
+      background-image: url(images/cafe2.PNG);
       background-size: cover;
     }
     #map{
       background-color: rgb(221, 218, 213);
     }
     #map > .photo{
-      background-image: url(../images/map.PNG);
+      background-image: url(images/map.PNG);
       background-size: cover;
     }
     #choice > .photo{
       border-radius: 50%;
       margin-left: 50px;
       margin-right: 0;
-      background-image: url(../images/cafe3.PNG);
+      background-image: url(images/cafe3.PNG);
       background-size: cover;
       
     }#choice > .detail{
