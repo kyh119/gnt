@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+/*************헤더*******************/
+header{
+  width: 80%;
+}
+header ul, li {
+  margin:0;
+  list-style: none;
+}
+header h1 {
+  display: inline-block;
+}
+header nav {
+  display: inline-block;
+  float: right;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header li {
+  margin-left: 15px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+
+/************섹션*****************/
+
+section{
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "big1 big1 small1 middle1"
+                       "big1 big1 small2 middle1"
+                       "big1 big1 middle2 middle2"
+                       "middle3 middle3 small3 small4"
+                       "middle4 small5 big2 big2"
+                       "middle4 small6 big2 big2"
+                       "middle5 middle5 big2 big2";
+  gap: 20px;
+}
+
+.firstbox{
+  grid-area: big1;
+  position: relative;
+  background-image: url(https://via.placeholder.com/400x500);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.firstbox > .textbox{
+  position: absolute;
+  text-align: center;
+  bottom: 100px;
+  background-color: rgb(255,255,255,60%);
+}
+
+
+.topsmallbox{
+  grid-area: small1;
+}
+
+.ononbox{
+  grid-area: small2;
+}
+
+.toprightbox{
+  grid-area: middle1;
+}
+
+.eventbox{
+  grid-area: middle2;
+}
+
+.leftmiddlebox{
+  grid-area: middle3;
+}
+
+.rightmiddlebox1{
+  grid-area: small3;
+}
+.rightmiddlebox2{
+  grid-area: small4;
+}
+
+.sketch{
+  grid-area: middle4;
+}
+
+.leftsmallbox1{
+  grid-area: small5;
+}
+
+.leftsmallbox2{
+  grid-area: small6;
+}
+
+.leftbottombox{
+  grid-area: middle5;
+}
+
+.endbox{
+  grid-area: big2;
+}
