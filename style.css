@@ -38,18 +38,15 @@
 }
 @media screen and (min-width:768px) {
   
-  #wrap > div:nth-child(1),
-  #wrap > div:nth-child(2),
-  #wrap > div:nth-child(3),
-  #wrap > div:nth-child(4){
+ #wrap > div{
     width: 49%;
+  }
+  #wrap > div:nth-child(5){
+    width : 100%;
   }
 }
 @media screen and (min-width:1024px) {
-  #wrap > div:nth-child(1),
-  #wrap > div:nth-child(2),
-  #wrap > div:nth-child(3),
-  #wrap > div:nth-child(4){
+ #wrap > div{
     width: 19%;
   }
   #wrap > div:nth-child(5){
