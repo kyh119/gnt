@@ -46,6 +46,21 @@ body{
 .color{
   display: flex;
 }
+#left::before{
+  content: "\f036";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#center::before{
+  content: "\f037";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#right::before{
+  content: "\f038";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
 
 /* text-decoration부분 */
 
