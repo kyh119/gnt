@@ -14,12 +14,27 @@
 // 정렬버튼 눌러서 정렬
 //-text-align클래스를 변수로 저장
 //-clickEvent함수에 추가
+
+// 줌레이트 을  let로 저장해 
+
+// 줌아웃 
+// if( 줌아웃값 >=50 ){
+// 줌아웃값 = 줌레이트 - 10 
+//줌레이트 = 줌아웃값}
+// 줌 인
+// if ( 줌인값 <=150){
+// 줌인값 = 줌레이트 + 10 
+// 줌레이트 = 줌아웃값}
+
 const fontSelect= document.querySelector('.font-style');
-const textArea = document.querySelector('#text-area');
+const textArea = document.querySelector('.text-area');
 const textDecoration = document.querySelector('.text-decoration');
 const color = document.querySelector('.color');
 const textAlign = document.querySelector('.text-align');
+const zoomOut = document.querySelector('#zoom-out');
+const zoomIn = document.querySelector('#zoom-in');
 
+let zoomRate = Number(document.querySelector('.zoom-rate').innerHTML);
 
 const clickEvent = (e) =>{
   switch(e.target.id){
@@ -60,7 +75,31 @@ const clickEvent = (e) =>{
     case 'right' :
       textArea.style.textAlign = e.target.value;
       break; 
+    
   }
+  if( e.target.id === 'zoom-out'){
+    if( zoomRate >= 50 ){
+      zoomRate = zoomRate - 10;
+      textArea.style.fontSize = 16*zoomRate/100+'px';
+      document.querySelector('.zoom-rate').innerHTML = zoomRate;
+    }
+  }
+  if( e.target.id === 'zoom-in'){
+    if( zoomRate <= 150 ){
+      zoomRate = zoomRate + 10;
+      textArea.style.fontSize = 16*zoomRate/100+'px';
+      document.querySelector('.zoom-rate').innerHTML = zoomRate;
+    }
+  }
+  
+
+
+//   줌아웃 
+// if( 줌아웃값 >=50 ){
+// 줌아웃값 = 줌레이트 - 10 
+// 줌레이트 = 줌아웃값}
+
+  
 }
 const changeEvent = (e) =>{
   if( e.target.id === 'font' ){
@@ -80,5 +119,7 @@ const init = () =>{
   textDecoration.addEventListener('click', clickEvent);
   textAlign.addEventListener('click', clickEvent);
   color.addEventListener('change', changeEvent);
+  zoomOut.addEventListener('click', clickEvent);
+  zoomIn.addEventListener('click', clickEvent);
 }
 init()
