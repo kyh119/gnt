@@ -92,3 +92,12 @@ body{
   padding: 10px;
   outline: none;
 }
+
+/* toggle 부분 */
+
+.new-bold{
+  font-weight: bolder;
+}
+.new-italic{
+  font-style: italic;
+}

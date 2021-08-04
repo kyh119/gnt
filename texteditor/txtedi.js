@@ -33,93 +33,67 @@ const color = document.querySelector('.color');
 const textAlign = document.querySelector('.text-align');
 const zoomOut = document.querySelector('#zoom-out');
 const zoomIn = document.querySelector('#zoom-in');
+const sizeSelect = document.querySelector('#font-size');
 
 let zoomRate = Number(document.querySelector('.zoom-rate').innerHTML);
 
+const toggle = (id) =>{
+  textArea.classList.toggle( 'new-'+id );
+}
 const clickEvent = (e) =>{
   switch(e.target.id){
     case 'bold' :
-      if( textArea.style.fontWeight === 'normal' ){
-        textArea.style.fontWeight = e.target.value;
-      }else{
-        textArea.style.fontWeight = 'normal';
-      }
+    case 'italic' :
+      toggle( e.target.id );
       break;
     case 'underline' :
-      if( textArea.style.textDecoration !== 'underline' ){
-        textArea.style.textDecoration = e.target.value;
-      }else{
-        textArea.style.textDecoration = 'none';
-      }
-      break;
-    case 'italic' :
-      if( textArea.style.fontStyle === 'normal' ){
-        textArea.style.fontStyle = e.target.value;
-      }else{
-        textArea.style.fontStyle = 'normal';
-      }
-      break;
     case 'line-through' :
-      if( textArea.style.textDecoration !== 'line-through' ){
-        textArea.style.textDecoration = e.target.value;
-      }else{
-        textArea.style.textDecoration = 'none';
-      }
+      textArea.style.textDecoration = ( textArea.style.textDecoration !== e.target.id ) ? e.target.id : 'none';
       break;
     case 'left' :
-      textArea.style.textAlign = e.target.value;
-      break;
     case 'center' :
-      textArea.style.textAlign = e.target.value;
-      break; 
     case 'right' :
-      textArea.style.textAlign = e.target.value;
-      break; 
-    
+      textArea.style.textAlign = e.target.id;
+      break;  
   }
   if( e.target.id === 'zoom-out'){
+    let fontSize = Number(sizeSelect.value);
     if( zoomRate >= 50 ){
       zoomRate = zoomRate - 10;
-      textArea.style.fontSize = 16*zoomRate/100+'px';
+      textArea.style.fontSize = fontSize*zoomRate/100+'pt';
       document.querySelector('.zoom-rate').innerHTML = zoomRate;
     }
   }
   if( e.target.id === 'zoom-in'){
-    if( zoomRate <= 150 ){
+    let fontSize = Number(sizeSelect.value);
+    if( zoomRate < 200 ){
       zoomRate = zoomRate + 10;
-      textArea.style.fontSize = 16*zoomRate/100+'px';
+      textArea.style.fontSize = fontSize*zoomRate/100+'pt';
       document.querySelector('.zoom-rate').innerHTML = zoomRate;
     }
   }
-  
-
-
-//   줌아웃 
-// if( 줌아웃값 >=50 ){
-// 줌아웃값 = 줌레이트 - 10 
-// 줌레이트 = 줌아웃값}
-
-  
 }
 const changeEvent = (e) =>{
   if( e.target.id === 'font' ){
     textArea.style.fontFamily = e.target.value;
   }else if( e.target.id === 'font-size' ){
-    textArea.style.fontSize = e.target.value;
+    textArea.style.fontSize = Number(zoomRate)*Number(e.target.value)/100+'pt';
+    console.log(Number(zoomRate)*Number(e.target.value)/100);
   }else if( e.target.id === 'text-color'){
     textArea.style.color = e.target.value;
   }else if( e.target.id === 'background-color'){
     textArea.style.backgroundColor = e.target.value;
   }
 } 
-
-
-const init = () =>{
+const eventList = () =>{
   fontSelect.addEventListener('change', changeEvent);
   textDecoration.addEventListener('click', clickEvent);
   textAlign.addEventListener('click', clickEvent);
   color.addEventListener('change', changeEvent);
   zoomOut.addEventListener('click', clickEvent);
   zoomIn.addEventListener('click', clickEvent);
+}
+const init = () =>{
+  eventList();
 }
 init()
