@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>momentum</title>
+</head>
+<body>
+  <p class="hidden">Hello</p>
+  <form id="loginForm">
+    <input required maxlength="10" type="text" placeholder="로그인 이름을 입력하세요">
+    <button>Log-In</button>
+  </form>
+  <h1 id="clock">00 : 00 : 00</h1>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <form id="todoForm">
+    <input type="text" placeholder="할일을 입력하세요" required>
+  </form>
+  <ul id="todoList"></ul>
+
+  <script src="script/login.js"></script>
+  <script src="script/clock.js"></script>
+  <script src="script/quotes.js"></script>
+  <script src="script/todolist.js"></script>
+  
+  <!-- <script src="script/event.js"></script> -->
+</body>
+</html>
