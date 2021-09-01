@@ -1,8 +1,7 @@
 const inputElem = document.querySelector('input');
 const loginForm = document.querySelector('#loginForm');
-const pElem = document.querySelector('p');
+const h1Elem = document.querySelector('h1');
 const USERNAME_KEY = 'username';
-
 
 const saveUserName = (strInput) =>{
   // 로컬스토리지에 저장
@@ -13,8 +12,8 @@ const loadUserName = () =>{
   return localStorage.getItem(USERNAME_KEY);
 }
 const printUserName = (userName) =>{
-  pElem.classList.remove('hidden');
-  pElem.innerText = `Hello ${userName}`;
+  h1Elem.classList.remove('hidden');
+  h1Elem.innerText = `${userName}님 어서오세요`;
   loginForm.classList.add('hidden');
 }
 const submitEvent = (event) =>{

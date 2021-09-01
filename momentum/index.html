@@ -1,33 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>momentum</title>
+  <title>MOMENTUM</title>
+  
 </head>
 <body>
-  <p class="hidden">Hello</p>
-  <form id="loginForm">
-    <input required maxlength="10" type="text" placeholder="로그인 이름을 입력하세요">
-    <button>Log-In</button>
-  </form>
-  <h1 id="clock">00 : 00 : 00</h1>
-  <div id="quote">
-    <span></span>
-    <span></span>
+  <div id="bg">
+    <img class="bg" src="">
   </div>
-  <form id="todoForm">
-    <input type="text" placeholder="할일을 입력하세요" required>
-  </form>
-  <ul id="todoList"></ul>
+  <div id="wrap">
+    <header id="header">
+      <form id="loginForm">
+        <input required maxlength="5" type="text" placeholder="">
+        <button class="hidden">Log-In</button>
+      </form>
+      <h1>님 어서오세요</h1>
+    </header>
+    <main id="clock">
+      <h2>0000 - 00 - 00</h2>
+      <h1>00 : 00 : 00</h1>
+    </main>
+    <section>
+      <div class="todo">
+        <form id="todoForm">
+          <input type="text" placeholder="할일을 입력하세요" required>
+        </form>
+        <ul id="todoList"></ul>
+      </div>
+      <div class="calender"></div>
+      <div class="weather"></div>
+      <div class="quote">
+        <h2></h2>
+        <h3></h3>
+      </div>
+    </section>
 
-  <script src="script/login.js"></script>
-  <script src="script/clock.js"></script>
-  <script src="script/quotes.js"></script>
-  <script src="script/todolist.js"></script>
-  
-  <!-- <script src="script/event.js"></script> -->
+  </div>
+<script src="script/login.js"></script>
+<script src="script/clock.js"></script>
+<script src="script/quotes.js"></script>
+<script src="script/todolist.js"></script>
+<script src="script/bg.js"></script>
 </body>
 </html>

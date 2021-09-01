@@ -21,12 +21,10 @@ const quotes = [
   }
 ];
 
-const quoteElem = document.querySelector('#quote span:nth-child(1)');
-const authorElem = document.querySelector('#quote span:nth-child(2)');
+const quoteElem = document.querySelector('.quote h2');
+const authorElem = document.querySelector('.quote h3');
 const num = Math.floor(Math.random()*quotes.length);
 const today = quotes[num];
 
 quoteElem.innerText = today.quote;
 authorElem.innerText = today.author;
-
-
