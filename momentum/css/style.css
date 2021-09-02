@@ -5,7 +5,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 *{
   margin: 0;
   padding: 0;
@@ -100,7 +99,7 @@ section{
 section .todo{
   width: 25%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
   border-radius: 15px;
 }
@@ -137,6 +136,7 @@ section .todo li button{
   background: none;
   margin-right: 20px;
   color: rgb(255, 103, 103);
+  cursor: pointer;
 }
 section .calender{
   width: 40%;
@@ -149,7 +149,7 @@ section .calender{
 section .weather{
   width: 25%;
   height: 45%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
   border-radius: 15px;
 }
@@ -168,7 +168,7 @@ section .quote{
   align-items: flex-end;
 }
 section .quote h2{
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0 20px;
 }
 section .quote h3{

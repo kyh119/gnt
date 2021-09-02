@@ -1,5 +1,5 @@
 const bg = [];
-for( let i=1; i<=8; i++){
+for( let i=1; i<=7; i++){
   bg.push(`images/bg${i}.jpg`)
 }
 
