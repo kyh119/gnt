@@ -1,5 +1,6 @@
 const inputElem = document.querySelector('input');
 const loginForm = document.querySelector('#loginForm');
+const btnLogout = document.querySelector('logout');
 const h1Elem = document.querySelector('h1');
 const USERNAME_KEY = 'username';
 
