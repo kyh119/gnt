@@ -35,10 +35,15 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-family: GmarketSansMedium;    
+    background-color: #F2F4F5;
+}
+input{
     font-family: GmarketSansMedium;
 }
 a{
     text-decoration: none;
+    display: block;
 }
 ol, ul {
     list-style: none;
