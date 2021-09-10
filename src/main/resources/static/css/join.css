@@ -22,14 +22,15 @@ body{
 }
 #header h2:nth-child(1){
   font-size: 30px;
-  color: #FF7A00;
   text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
   position: absolute;
   left: 1%;
 }
+#header h2:nth-child(1) a {
+  color: #FF7A00;
+}
 #header h2:nth-child(2){
   font-size: 18px;
-  color: #fff;
   width: 90px;
   height: 40px;
   background: #FF7A00;
@@ -38,6 +39,9 @@ body{
   text-align: center;
   position: absolute;
   right: 1%;
+}
+#header h2:nth-child(2) a {
+  color: #fff;
 }
 /* 회원가입 폼 */
 #joinform{
