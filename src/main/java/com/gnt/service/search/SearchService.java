@@ -1,13 +1,11 @@
 package com.gnt.service.search;
 
-import com.gnt.web.dto.Match;
 import com.gnt.web.dto.Summoner;
+import com.gnt.web.dto.match.Match;
 
 import java.util.List;
 
 public interface SearchService {
-
-    Summoner getSummonerByName(String summonerName);
-
-    List<Match> getMatchListByName(String summonerName);
+    public Summoner getSummonerByName(String summonerName);
+    public List<Match> getMatchListByName(String summonerName, int start, int count);
 }

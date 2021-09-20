@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.web.dto.League;
-import com.gnt.web.dto.Match;
+import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.Summoner;
 import org.springframework.stereotype.Component;
 
@@ -104,8 +104,8 @@ public class ApiHandlerImpl implements ApiHandler {
     }
 
     @Override
-    public List<String> getMatchIdListByPuuid(String puuid) {
-        uri = asiaUri + "/lol/match/v5/matches/by-puuid/" + puuid + "/ids";
+    public List<String> getMatchIdListByPuuid(String puuid, int start, int count) {
+        uri = asiaUri + "/lol/match/v5/matches/by-puuid/" + puuid + "/ids?start=" + start + "&count=" + count;
         try {
             return mapper.readValue(getJson(uri), new TypeReference<List<String>>() {
             });
@@ -119,8 +119,10 @@ public class ApiHandlerImpl implements ApiHandler {
     public Match getMatchByMatchId(String matchId) {
         uri = asiaUri + "/lol/match/v5/matches/" + matchId;
         try {
+            System.out.println(getJson(uri));
             return mapper.readValue(getJson(uri), Match.class);
         } catch (JsonProcessingException e) {
+            e.printStackTrace();
             System.out.println("JSON 파싱 실패");
         }
         return null;

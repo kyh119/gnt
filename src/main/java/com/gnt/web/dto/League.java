@@ -1,10 +1,12 @@
 package com.gnt.web.dto;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class League {
 
     private String queueType;
@@ -14,7 +16,6 @@ public class League {
     private Integer wins;
     private Integer losses;
 
-    public League() {}
 
     public League(String queueType, String tier, String rank, Integer leaguePoints, Integer wins, Integer losses) {
         this.queueType = queueType;
