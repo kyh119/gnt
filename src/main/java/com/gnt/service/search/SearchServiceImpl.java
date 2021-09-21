@@ -1,6 +1,6 @@
 package com.gnt.service.search;
 
-import com.gnt.web.dto.Match;
+import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.Summoner;
 import com.gnt.service.api.ApiHandler;
 import lombok.RequiredArgsConstructor;
@@ -24,10 +24,10 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<Match> getMatchListByName(String summonerName) {
+    public List<Match> getMatchListByName(String summonerName, int start, int count) {
         ArrayList<Match> matchList = new ArrayList<>();
         Summoner summoner = apiHandler.getSummonerByName(summonerName);
-        List<String> idList = apiHandler.getMatchIdListByPuuid(summoner.getPuuid());
+        List<String> idList = apiHandler.getMatchIdListByPuuid(summoner.getPuuid(), start, count);
         for (String id : idList)
             matchList.add(apiHandler.getMatchByMatchId(id));
         return matchList;
