@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/summoner.css">
+  <script src="/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -38,23 +39,23 @@
       </div>
     </header>
     <section id="summoner-info">
-      <div class="summoner-icon">
-        <p>Lv <span>222</span></p>
+      <div class="summoner-icon" id="summonerIcon">
+        <p>Lv <span id="summonerLevel">222</span></p>
       </div>
       <div class="summoner-info-text">
-        <h2>용 조런사 룰루</h4>
+        <h2 id="summonerName">용 조런사 룰루</h2>
         <p>Diamond 1</p>
         <p>랭킹 <span>111,111위</span> (상위 <span>22%</span>위)</p>
       </div>
     </section>
     <section id="summoner-lank">
       <div class="solo">
-        <div class="sololank-img"></div>
+        <div class="sololank-img" id="soloRankImg"></div>
         <div class="sololank-text">
           <h2>솔로랭크</h2>
-          <h2>Diamond1</h2>
-          <p>10 LP</p>
-          <P>0승 0패 (0%)</P>
+          <h2 id="tierAndRank">Diamond1</h2>
+          <p id="leaguePoint">10 LP</p>
+          <p><span id="soloWinsAndLosses">0승 0패</span> (<span id="winRate">0</span>%)</p>
         </div>
       </div>
       <div class="free">

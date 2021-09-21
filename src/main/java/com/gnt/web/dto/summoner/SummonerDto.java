@@ -8,13 +8,13 @@ import java.util.List;
 public class SummonerDto {
     private String name;
     private Integer profileIconId;
-    private Long summonerLevel;
+    private Long level;
     private List<League> leagueList;
 
     public SummonerDto(Summoner summoner) {
         this.name = summoner.getName();
         this.profileIconId = summoner.getProfileIconId();
-        this.summonerLevel = summoner.getSummonerLevel();
+        this.level = summoner.getSummonerLevel();
         this.leagueList = summoner.getLeagueList();
     }
 }
