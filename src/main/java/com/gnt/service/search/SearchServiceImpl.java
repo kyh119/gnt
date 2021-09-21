@@ -1,8 +1,9 @@
 package com.gnt.service.search;
 
 import com.gnt.web.dto.match.Match;
-import com.gnt.web.dto.Summoner;
+import com.gnt.web.dto.summoner.Summoner;
 import com.gnt.service.api.ApiHandler;
+import com.gnt.web.dto.summoner.SummonerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,11 +17,11 @@ public class SearchServiceImpl implements SearchService {
     private final ApiHandler apiHandler;
 
     @Override
-    public Summoner getSummonerByName(String summonerName) {
+    public SummonerDto getSummonerByName(String summonerName) {
         Summoner summoner = apiHandler.getSummonerByName(summonerName);
         // System.out.println(summoner.getId());
         summoner.setLeagueList(apiHandler.getLeagueListBySummonerId(summoner.getId()));
-        return summoner;
+        return new SummonerDto(summoner);
     }
 
     @Override

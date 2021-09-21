@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.web.dto.League;
 import com.gnt.web.dto.match.Match;
-import com.gnt.web.dto.Summoner;
+import com.gnt.web.dto.summoner.Summoner;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;

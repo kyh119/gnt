@@ -1,10 +1,8 @@
 package com.gnt.web;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@RequiredArgsConstructor
 @Controller
 public class IndexController {
 
@@ -12,4 +10,15 @@ public class IndexController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/join")
+    public String join() {
+        return "join";
+    }
+
 }
