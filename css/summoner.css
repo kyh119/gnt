@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+#wrap{
+  width: 100%;
+  height: 100%;
+}
+#header{
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+/* 헤더 탑 부분 */
+.header-top{
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top .logo{
+  margin-left: 30px;
+}
+.header-top .logo a{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 25px;
+  color: #FF7A00;
+}
+.header-top .logo span{
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFAA5C;
+}
+/* 검색창 */
+.header-top .search-area{
+  width: 600px;
+  height: 37.5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px #7B7777;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+.header-top .search-area .search-input{
+  width: 530px;
+  height: 30px;
+  background: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+.header-top .search-area .search-input:focus{
+  outline: none;
+}
+.header-top .search-area .search-btn{
+  width: 37px;
+  height: 37px;
+  font-size: 18px;
+  line-height: 37px;
+  color: rgb(246, 132, 39);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* 로그인버튼 */
+.header-top .login{
+  margin-right: 30px;
+}
+.header-top .login h1{
+  display: none;
+}
+.header-top .login h2{
+  width: 100px;
+  height: 42px;
+  background: #FF7A00;
+  border-radius: 20px;
+  text-align: center;
+}
+.header-top .login h2 a{
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  line-height: 45px;
+}
+
+/* 헤더- 바텀 부분 */
+.header-bottom{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 70px;
+}
+/* 헤더 - 메뉴 부분 */
+.nav{
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #7B7777;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+}
+.nav ul{
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav ul li{
+  font-size: 15px;
+  line-height: 16px;
+}
+.nav ul li a{
+  color: #333333;
+}
+
+/* 소환사 정보 summoner-info 부분 */
+#summoner-info{
+  width: 380px;
+  height: 130px;
+  position: relative;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#summoner-info .summoner-icon{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: #D8D3D3;
+  position: relative;
+}
+#summoner-info .summoner-icon p{
+  font-size: 15px;
+  line-height: 17px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#summoner-info .summoner-icon p span{
+  color: #FF7A00;;
+}
+/* 소환사정보 텍스트 부분 */
+#summoner-info .summoner-info-text{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+#summoner-info .summoner-info-text h2{
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+#summoner-info .summoner-info-text p{
+  font-size: 16px;
+}
+#summoner-info .summoner-info-text p:nth-of-type(1){
+  margin-bottom: 15px;
+}
+#summoner-info .summoner-info-text p span:nth-of-type(1){
+  color: #FF7A00;
+}
+/* summoner-lank 부분 */
+#summoner-lank{
+  width: 800px;
+  height: 150px;
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+#summoner-lank .solo{
+  border-right: 1px solid #fff;
+}
+#summoner-lank .solo,
+#summoner-lank .free{
+  width: 400px;
+  height: 150px;
+  background-color: #E7E7E7;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#summoner-lank .solo .sololank-img,
+#summoner-lank .free .freelank-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #A4A4A4;
+}
+#summoner-lank .solo .sololank-text h2,
+#summoner-lank .free .freelank-text h2{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#summoner-lank .solo .sololank-text h2:nth-of-type(2),
+#summoner-lank .free .freelank-text h2:nth-of-type(2){
+  font-size: 15px;
+  color: #FF7A00;
+  margin-bottom: 7px;
+}
+#summoner-lank .solo .sololank-text p,
+#summoner-lank .free .freelank-text p{
+  font-size: 12px;
+}
+#summoner-lank .solo .sololank-text p:nth-of-type(1),
+#summoner-lank .free .freelank-text p:nth-of-type(1){
+  margin-bottom: 5px;
+}
+/* gamemod 부분 */
+
+#gamemod{
+  width: 800px;
+  height: 150px;
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#gamemod .gamemod-tab h2{
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom-color: #fff;
+  background-color: #e7e7e7;
+}
+#gamemod .gamemod-tab h2.on{
+  background-color: #fff;
+
+}
+#gamemod .gamemod-tab h2 a{
+  font-size: 16px;
+  text-align: center;
+}
+
+/* gamemod - contents 부분 */
+#gamemod .gamemod-contents{
+  width: 800px;
+  height: 150px;
+  background-color: #fff;
+}
+#gamemod .gamemod-contents .mostchamp{
+  width: 300px;
+}
+#gamemod .gamemod-contents .mostchamp .mostchamplist{
+  position: relative;
+  height: 50px;
+  margin-left: 20px;
+}
+#gamemod .gamemod-contents .mostchamp .mostchamplist .mostchamp-img{
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  background-color: #A4A4A4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#gamemod .gamemod-contents .mostchamp .mostchamplist h3{
+  font-size: 15px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+#gamemod .gamemod-contents .mostchamp .mostchamplist p{
+  font-size: 12px;
+  position: absolute;
+  top: 27px;
+  left: 50px;
+}
