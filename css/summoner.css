@@ -602,12 +602,6 @@
 
   #gamemod .gamemod-contents .gameaverage{
     width: 65%;
-    height: 110px;
-    position: absolute;
-    right: 0px;
-    top: 40px;
-    padding-top: 40px;
-    text-align: center;
   }
   #gamemod .gamemod-contents .gameaverage h2{
     font-size: 16px;
@@ -616,18 +610,8 @@
     font-size: 12px;
     margin-top: 6px;
   }
-  #gamemod .gamemod-contents .gameaverage p span:nth-of-type(2){
-    color: #ff3434;
-  }
   #gamemod .gamemod-contents .gameaverage h1{
-    margin-top: 17px;
     font-size: 16px;
-  }
-  #gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(1){
-    color: #669AFF;
-  }
-  #gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(2){
-    color: #ff3434;
   }
 }
 
