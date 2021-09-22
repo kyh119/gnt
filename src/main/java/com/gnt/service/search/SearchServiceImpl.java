@@ -7,6 +7,8 @@ import com.gnt.web.dto.summoner.SummonerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,11 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public SummonerDto getSummonerByName(String summonerName) {
+        try {
+            summonerName = URLEncoder.encode(summonerName, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            System.out.println("인코딩 오류");
+        }
         Summoner summoner = apiHandler.getSummonerByName(summonerName);
         // System.out.println(summoner.getId());
         summoner.setLeagueList(apiHandler.getLeagueListBySummonerId(summoner.getId()));

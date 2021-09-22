@@ -1,7 +1,6 @@
 window.onload = () => {
   let summonerName = window.location.pathname;
-  summonerName = summonerName.replace('/search/', '');
-  summonerName = decodeURI(summonerName)
+  summonerName = summonerName.replace('/search/', '').replaceAll('+','%20');
   const url = `/api/get/summoner/by-name/${summonerName}`;
   fetch(url).then((response) => {
     return response.json();
