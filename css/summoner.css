@@ -143,6 +143,9 @@
   position: absolute;
   top: 70px;
 }
+.header-bottom .search-area{
+  display: none;
+}
 /* 헤더 - 메뉴 부분 */
 .nav{
   width: 100%;
@@ -224,6 +227,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+}
+#summoner-lank .solo>h2,
+#summoner-lank .free>h2{
+  display: none;
 }
 #summoner-lank .solo{
   border-right: 1px solid #fff;
@@ -376,6 +383,45 @@
     display: none;
   }
   #header .header-bottom{
+    position: relative;
+  }
+  .header-bottom .search-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px #7B7777;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  .header-bottom .search-area .search-input{
+    width: 240px;
+    height: 40px;
+    background: none;
+    border: none;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .header-bottom .search-area .search-input:focus{
+    outline: none;
+  }
+  .header-bottom .search-area .search-btn{
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 35px;
+    color: rgb(246, 132, 39);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #header .header-bottom .nav{
     display: none;
   }
   /* 햄버거메뉴 */
@@ -411,7 +457,7 @@
     border-radius: 20px;
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: 5px;
     font-size: 20px;
     text-align: center;
     line-height: 42px;
@@ -422,6 +468,166 @@
   }
   #header .login h2{
     display: none;
+  }
+  /* summoner info */
+  #summoner-info{
+    width: 250px;
+    height: 80px;
+    top: 40px;
+  }
+  #summoner-info .summoner-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+  }
+  #summoner-info .summoner-icon p{
+    width: 45px;
+    font-size: 12px;
+    line-height: 12px;
+    
+  }
+  /* 소환사정보 텍스트 부분 */
+  #summoner-info .summoner-info-text{
+    right: 5px;
+  }
+  #summoner-info .summoner-info-text h2{
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  #summoner-info .summoner-info-text p{
+    font-size: 12px;
+  }
+  #summoner-info .summoner-info-text p:nth-of-type(1){
+    margin-bottom: 8px;
+  }
+  /* summoner-lank 부분 */
+  #summoner-lank{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  #summoner-lank .solo{
+    border-right: 1px solid #fff;
+  }
+  #summoner-lank .solo,
+  #summoner-lank .free{
+    width: 400px;
+    height: 150px;
+    background-color: #E7E7E7;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  #summoner-lank .solo>h2,
+  #summoner-lank .free>h2{
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  #summoner-lank .solo .sololank-img,
+  #summoner-lank .free .freelank-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #A4A4A4;
+  }
+  #summoner-lank .solo .sololank-text h2:nth-child(1),
+  #summoner-lank .free .freelank-text h2:nth-child(1){
+    display: none;
+  }
+  #summoner-lank .solo .sololank-text h2:nth-of-type(2),
+  #summoner-lank .free .freelank-text h2:nth-of-type(2){
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  /* gamemod 부분 */
+
+  #gamemod{
+    width: 100%;
+    top: 140px;
+  }
+  #gamemod .gamemod-tab h2{
+    width: 58px;
+  }
+  #gamemod .gamemod-tab h2 a{
+    font-size: 12px;
+  }
+  /* gamemod - contents 부분 */
+  #gamemod .gamemod-contents{
+    width: 100%;
+  }
+  #gamemod .gamemod-contents .mostchamp{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist{
+    height: auto;
+    margin-left: 0;
+    top: 0;
+    display: inline-block;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist:nth-child(3){
+    display: none;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist .mostchamp-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+    background-color: #A4A4A4;
+    position: unset;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist h3{
+    font-size: 15px;
+    position: unset;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist p{
+    font-size: 12px;
+    position: unset;
+    top: 27px;
+    left: 50px;
+  }
+  #gamemod .gamemod-contents .mostchamp .mostchamplist p span{
+    display: none;
+  }
+  /* gameaverage부분 */
+
+  #gamemod .gamemod-contents .gameaverage{
+    width: 65%;
+    height: 110px;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    padding-top: 40px;
+    text-align: center;
+  }
+  #gamemod .gamemod-contents .gameaverage h2{
+    font-size: 16px;
+  }
+  #gamemod .gamemod-contents .gameaverage p{
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  #gamemod .gamemod-contents .gameaverage p span:nth-of-type(2){
+    color: #ff3434;
+  }
+  #gamemod .gamemod-contents .gameaverage h1{
+    margin-top: 17px;
+    font-size: 16px;
+  }
+  #gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(1){
+    color: #669AFF;
+  }
+  #gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(2){
+    color: #ff3434;
   }
 }
 
