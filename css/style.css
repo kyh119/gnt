@@ -61,27 +61,42 @@
 /* 헤더 - 로그인 */
 .login{
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: relative;
 }
 .login h1{
-  display: none;
-}
-.login h2{
-  width: 100px;
+  width: 40px;
   height: 40px;
   background: #FF7A00;
   border-radius: 20px;
   position: absolute;
-  top: 10px;
-  right: 1%;
+  top: 15px;
+  right: 10px;
   font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  display: none;
+}
+.login h1>a{
+  color: #fff;
+}
+.login h2{
+  width: 100px;
+  height: 42px;
+  background: #FF7A00;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
   letter-spacing: 0.07em;
   text-align: center;
-  line-height: 43px;
+  margin-right: 10px;
 }
 .login h2>a {
   color: white;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 45px;
 }
 /* 헤더- 메뉴 */
 .nav{
@@ -229,20 +244,7 @@
     position: relative;
   }
   .login h1{
-    width: 50px;
-    height: 50px;
-    background: #FF7A00;
-    border-radius: 50px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 55px;
     display: block;
-  }
-  .login h1>a{
-    color: #fff;
   }
   .login h2{
     display: none;
@@ -302,20 +304,7 @@
     position: relative;
   }
   .login h1{
-    width: 50px;
-    height: 50px;
-    background: #FF7A00;
-    border-radius: 50px;
-    position: absolute;
-    top: 10px;
-    right: 1%;
-    font-size: 30px;
-    text-align: center;
-    line-height: 55px;
     display: block;
-  }
-  .login h1>a{
-    color: #fff;
   }
   .login h2{
     display: none;
