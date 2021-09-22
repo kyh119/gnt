@@ -4,6 +4,55 @@
   width: 100%;
   height: 100%;
 }
+/* 햄버거 */
+/* 햄버거 */
+.ham {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  width: 60px; 
+  height: 55px; 
+  cursor:pointer;
+  z-index: 1;
+  display: none;
+}
+.ham span {
+  display: block;
+  background: #FF7A00;
+  margin: 0 auto;
+  width: 42px;
+  height: 4px;
+  border-radius: 3px;
+  transition: margin 0.25s 0.25s, transform 0.25s ;
+}
+.ham .bar1 {
+  margin-bottom: 8px;
+}
+.ham .bar3 {
+  margin-top: 8px;
+}
+/* 햄버거 엑스자 */
+.ham.active span {
+  transition: margin 0.25s, transform 0.25s 0.25s;
+  background: #fff;
+}
+
+.ham.active .bar1 {
+  margin-top: 8px;
+  margin-bottom: -4px;
+  transform: rotate(45deg);
+}
+.ham.active .bar2 {
+  transform: rotate(45deg);
+  
+}
+.ham.active .bar3 {
+  margin-top: -4px;
+  transform: rotate(135deg);
+}
+.hamnav{
+  display: none;
+}
 #header{
   width: 100%;
   height: 120px;
@@ -19,7 +68,7 @@
   align-items: center;
 }
 .header-top .logo{
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .header-top .logo a{
   font-style: normal;
@@ -36,7 +85,7 @@
 }
 /* 검색창 */
 .header-top .search-area{
-  width: 600px;
+  width: 450px;
   height: 37.5px;
   box-sizing: border-box;
   box-shadow: 0 0 2px #7B7777;
@@ -45,7 +94,7 @@
   background-color: #fff;
 }
 .header-top .search-area .search-input{
-  width: 530px;
+  width: 390px;
   height: 30px;
   background: none;
   border: none;
@@ -68,7 +117,7 @@
 }
 /* 로그인버튼 */
 .header-top .login{
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .header-top .login h1{
   display: none;
@@ -219,7 +268,7 @@
 
 #gamemod{
   width: 800px;
-  height: 150px;
+  height: 190px;
   position: relative;
   top: 150px;
   left: 50%;
@@ -247,9 +296,11 @@
   width: 800px;
   height: 150px;
   background-color: #fff;
+  
 }
 #gamemod .gamemod-contents .mostchamp{
-  width: 300px;
+  width: 400px;
+  height: 150px;
 }
 #gamemod .gamemod-contents .mostchamp .mostchamplist{
   position: relative;
@@ -276,4 +327,105 @@
   position: absolute;
   top: 27px;
   left: 50px;
+}
+/* gameaverage부분 */
+
+#gamemod .gamemod-contents .gameaverage{
+  width: 400px;
+  height: 110px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
+#gamemod .gamemod-contents .gameaverage h2{
+  font-size: 20px;
+}
+#gamemod .gamemod-contents .gameaverage p{
+  font-size: 14px;
+  margin-top: 6px;
+}
+#gamemod .gamemod-contents .gameaverage p span:nth-of-type(2){
+  color: #ff3434;
+}
+#gamemod .gamemod-contents .gameaverage h1{
+  margin-top: 17px;
+  font-size: 20px;
+}
+#gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(1){
+  color: #669AFF;
+}
+#gamemod .gamemod-contents .gameaverage h1 span:nth-of-type(2){
+  color: #ff3434;
+}
+
+/* 미디어쿼리 */
+/* 모바일 사이즈 */
+@media screen and (max-width:425px){
+  #header .header-top .logo{
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #header .header-top .logo span{
+    display: none;
+  }
+  #header .header-top .search-area{
+    display: none;
+  }
+  #header .header-bottom{
+    display: none;
+  }
+  /* 햄버거메뉴 */
+  .ham{
+    display: block;
+  }
+  .hamnav{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 260px;
+    background-color: rgb(246, 132, 39);
+  }
+  .hamnav ul{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 150px;
+    height: 160px;
+  }
+  .hamnav ul li{
+    font-size: 18px;
+    line-height: 46px;
+  }
+  .hamnav ul li a{
+    color: white;
+  }
+  /* 햄버거메뉴끝 */
+  #header .login h1{
+    width: 40px;
+    height: 40px;
+    background: #FF7A00;
+    border-radius: 20px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    display: block;
+  }
+  #header .login h1 i{
+    color: #fff;
+  }
+  #header .login h2{
+    display: none;
+  }
+}
+
+/* 태블릿사이즈 */
+@media screen and (min-width:426px) and (max-width:767px){
+
 }
