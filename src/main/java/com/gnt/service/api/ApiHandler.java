@@ -1,6 +1,6 @@
 package com.gnt.service.api;
 
-import com.gnt.web.dto.League;
+import com.gnt.web.dto.summoner.League;
 import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.summoner.Summoner;
 

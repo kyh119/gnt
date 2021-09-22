@@ -16,16 +16,17 @@ window.onload = () => {
     summonerName.html(`${data.name}`);
 
     const soloRankImg = $('#soloRankImg');
+    soloRankImg.css('background', `url(/images/emblem/${data.soloLeague.tier}.png)`).css('background-size','cover');
 
     const tierAndRank = $('#tierAndRank');
-    tierAndRank.html(`${data.leagueList[0].tier} ${data.leagueList[0].rank}`);
+    tierAndRank.html(`${data.soloLeague.tier} ${data.soloLeague.rank}`);
 
     const leaguePoints = $('#leaguePoint');
-    leaguePoints.html(`${data.leagueList[0].leaguePoints} LP`);
+    leaguePoints.html(`${data.soloLeague.leaguePoints} LP`);
 
     const soloWinsAndLosses = $('#soloWinsAndLosses');
-    const soloWins = data.leagueList[0].wins;
-    const soloLosses = data.leagueList[0].losses;
+    const soloWins = data.soloLeague.wins;
+    const soloLosses = data.soloLeague.losses;
     const winRate = $('#winRate');
     let _winRate = soloWins*100/(soloWins+soloLosses);
     soloWinsAndLosses.html(`${soloWins}승 ${soloLosses}패`);

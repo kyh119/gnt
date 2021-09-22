@@ -1,4 +1,4 @@
-package com.gnt.web.dto;
+package com.gnt.web.dto.summoner;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.NoArgsConstructor;

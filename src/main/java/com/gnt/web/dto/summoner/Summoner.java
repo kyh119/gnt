@@ -1,6 +1,5 @@
 package com.gnt.web.dto.summoner;
 
-import com.gnt.web.dto.League;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
