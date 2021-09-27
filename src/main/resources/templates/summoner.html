@@ -8,23 +8,37 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/summoner.css">
-  <script src="/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
   <div id="wrap">
     <header id="header">
       <div class="header-top">
-        <h1 class="logo"><a href="/">그<span>래서</span>님 티<span>어가?</span></a></h1>
+        <!-- 햄버거메뉴 -->
+        <div class="ham">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </div>
+        <nav class="hamnav">
+          <ul>
+            <li><a href="#">랭킹</a></li>
+            <li><a href="#">챔피언</a></li>
+            <li><a href="#">통계</a></li>
+            <li><a href="#">커뮤니티</a></li>
+          </ul>
+        </nav>
+        <!-- 햄버거메뉴끝 -->
+        <h1 class="logo"><a href="/">그<span>래서</span>님<span> </span>티<span>어가?</span></a></h1>
         <div class="search-area">
-          <form action="/search" method="get" accept-charset="UTF-8">
+          <form action="/search" method="get">
             <input class="search-input" type="text" name="userName"
              placeholder="닉네임을 입력하세요">
             <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
         <div class="login">
-          <h1><a href="login.html"><i class="fas fa-user"></i></a></h1>
-          <h2><a href="login.html">로그인</a></h2>
+          <h1><a href="/login"><i class="fas fa-user"></i></a></h1>
+          <h2><a href="/login">로그인</a></h2>
         </div>
       </div>
       <div class="header-bottom">
@@ -36,35 +50,34 @@
             <li><a href="#">커뮤니티</a></li>
           </ul>
         </nav>
+        <div class="search-area">
+          <form action="/search" method="get">
+            <input class="search-input" type="text" name="userName"
+             placeholder="닉네임을 입력하세요">
+            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
       </div>
     </header>
     <section id="summoner-info">
-      <div class="summoner-icon" id="summonerIcon">
-        <p>Lv <span id="summonerLevel">222</span></p>
+      <div class="summoner-icon">
       </div>
       <div class="summoner-info-text">
-        <h2 id="summonerName">용 조런사 룰루</h2>
-        <p>Diamond 1</p>
-        <p>랭킹 <span>111,111위</span> (상위 <span>22%</span>위)</p>
       </div>
     </section>
-    <section id="summoner-lank">
+    <section id="summoner-rank">
       <div class="solo">
-        <div class="sololank-img" id="soloRankImg"></div>
-        <div class="sololank-text">
+        <h2>솔로랭크</h2>
+        <div class="solorank-img"></div>
+        <div class="solorank-text">
           <h2>솔로랭크</h2>
-          <h2 id="tierAndRank">Diamond1</h2>
-          <p id="leaguePoint">10 LP</p>
-          <p><span id="soloWinsAndLosses">0승 0패</span> (<span id="winRate">0</span>%)</p>
         </div>
       </div>
       <div class="free">
-        <div class="freelank-img"></div>
-        <div class="freelank-text">
+        <h2>자유랭크</h2>
+        <div class="freerank-img"></div>
+        <div class="freerank-text">
           <h2>자유랭크</h2>
-          <h2>Diamond1</h2>
-          <p>10 LP</p>
-          <P>0승 0패 (0%)</P>
         </div>
       </div>
     </section>
@@ -81,22 +94,29 @@
           <div class="mostchamplist">
             <div class="mostchamp-img"></div>
             <h3>티모</h3>
-            <p>80% (4승 1패) <span>평점 2.49</span></p>
+            <p>80%<span> (4승 1패) </span><span>평점 2.49</span></p>
           </div>
           <div class="mostchamplist">
             <div class="mostchamp-img"></div>
             <h3>룰루</h3>
-            <p>80% (4승 1패) <span>평점 2.49</span></p>
+            <p>80%<span> (4승 1패) </span><span>평점 2.49</span></p>
           </div>
           <div class="mostchamplist">
             <div class="mostchamp-img"></div>
             <h3>소라카</h3>
-            <p>80% (4승 1패) <span>평점 2.49</span></p>
+            <p>80%<span> (4승 1패) </span><span>평점 2.49</span></p>
           </div>
+        </div>
+        <div class="gameaverage">
+          <h2>평점 3.80</h2>
+          <p><span>6.2</span>/<span>8.4</span>/<span>25.6</span></p>
+          <h1>20전 <span>10승</span> <span>10패</span> 승률 50%</h1>
         </div>
       </div>
     </section>
   </div>
+  <script src="/js/jquery-1.12.4.min.js"></script>
+  <script src="/js/nav.js"></script>
   <script src="/js/summoner.js"></script>
 </body>
 </html>

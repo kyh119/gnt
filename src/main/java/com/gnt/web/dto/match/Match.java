@@ -10,7 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Match {
-
     private Info info;
-
 }

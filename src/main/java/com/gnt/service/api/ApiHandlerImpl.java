@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.web.dto.summoner.League;
 import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.summoner.Summoner;
+import com.sun.deploy.net.HttpResponse;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -119,11 +121,11 @@ public class ApiHandlerImpl implements ApiHandler {
     public Match getMatchByMatchId(String matchId) {
         uri = asiaUri + "/lol/match/v5/matches/" + matchId;
         try {
-            System.out.println(getJson(uri));
+            // System.out.println(getJson(uri));
             return mapper.readValue(getJson(uri), Match.class);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-            System.out.println("JSON 파싱 실패");
+            System.out.println("매치 정보 파싱 실패");
         }
         return null;
     }

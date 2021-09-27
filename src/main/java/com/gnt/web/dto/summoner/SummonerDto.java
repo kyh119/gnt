@@ -20,7 +20,7 @@ public class SummonerDto {
                 case "RANKED_SOLO_5x5":
                     this.soloLeague = league;
                     break;
-                case "RANKED_TEAM_5x5":
+                case "RANKED_FLEX_SR":
                     this.teamLeague = league;
                     break;
             }

@@ -12,7 +12,11 @@ import java.util.List;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Info {
+    private Long gameDuration;
+    private Long gameStartTimestamp;
     private String gameMode;
     private String gameType;
+    private int mapId;
     private List<Participant> participants;
+    private List<Team> teams;
 }

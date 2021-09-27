@@ -289,8 +289,8 @@
 #summoner-info .summoner-info-text p span:nth-of-type(1){
   color: #FF7A00;
 }
-/* summoner-lank 부분 */
-#summoner-lank{
+/* summoner-rank 부분 */
+#summoner-rank{
   width: 800px;
   height: 150px;
   position: relative;
@@ -299,15 +299,15 @@
   transform: translateX(-50%);
   display: flex;
 }
-#summoner-lank .solo>h2,
-#summoner-lank .free>h2{
+#summoner-rank .solo>h2,
+#summoner-rank .free>h2{
   display: none;
 }
-#summoner-lank .solo{
+#summoner-rank .solo{
   border-right: 1px solid #fff;
 }
-#summoner-lank .solo,
-#summoner-lank .free{
+#summoner-rank .solo,
+#summoner-rank .free{
   width: 400px;
   height: 150px;
   background-color: #E7E7E7;
@@ -316,30 +316,30 @@
   justify-content: space-evenly;
   align-items: center;
 }
-#summoner-lank .solo .sololank-img,
-#summoner-lank .free .freelank-img{
+#summoner-rank .solo .solorank-img,
+#summoner-rank .free .freerank-img{
   width: 70px;
   height: 70px;
   border-radius: 35px;
   background-color: #A4A4A4;
 }
-#summoner-lank .solo .sololank-text h2,
-#summoner-lank .free .freelank-text h2{
+#summoner-rank .solo .solorank-text h2,
+#summoner-rank .free .freerank-text h2{
   font-size: 14px;
   margin-bottom: 5px;
 }
-#summoner-lank .solo .sololank-text h2:nth-of-type(2),
-#summoner-lank .free .freelank-text h2:nth-of-type(2){
+#summoner-rank .solo .solorank-text h2:nth-of-type(2),
+#summoner-rank .free .freerank-text h2:nth-of-type(2){
   font-size: 15px;
   color: #FF7A00;
   margin-bottom: 7px;
 }
-#summoner-lank .solo .sololank-text p,
-#summoner-lank .free .freelank-text p{
+#summoner-rank .solo .solorank-text p,
+#summoner-rank .free .freerank-text p{
   font-size: 12px;
 }
-#summoner-lank .solo .sololank-text p:nth-of-type(1),
-#summoner-lank .free .freelank-text p:nth-of-type(1){
+#summoner-rank .solo .solorank-text p:nth-of-type(1),
+#summoner-rank .free .freerank-text p:nth-of-type(1){
   margin-bottom: 5px;
 }
 /* gamemod 부분 */
@@ -505,8 +505,8 @@
   #summoner-info .summoner-info-text p:nth-of-type(1){
     margin-bottom: 8px;
   }
-  /* summoner-lank 부분 */
-  #summoner-lank{
+  /* summoner-rank 부분 */
+  #summoner-rank{
     width: 100%;
     height: 150px;
     position: relative;
@@ -515,11 +515,11 @@
     transform: translateX(-50%);
     display: flex;
   }
-  #summoner-lank .solo{
+  #summoner-rank .solo{
     border-right: 1px solid #fff;
   }
-  #summoner-lank .solo,
-  #summoner-lank .free{
+  #summoner-rank .solo,
+  #summoner-rank .free{
     width: 400px;
     height: 150px;
     background-color: #E7E7E7;
@@ -530,25 +530,25 @@
     align-items: center;
     text-align: center;
   }
-  #summoner-lank .solo>h2,
-  #summoner-lank .free>h2{
+  #summoner-rank .solo>h2,
+  #summoner-rank .free>h2{
     display: block;
     font-size: 14px;
     margin-top: 5px;
   }
-  #summoner-lank .solo .sololank-img,
-  #summoner-lank .free .freelank-img{
+  #summoner-rank .solo .solorank-img,
+  #summoner-rank .free .freerank-img{
     width: 50px;
     height: 50px;
     border-radius: 25px;
     background-color: #A4A4A4;
   }
-  #summoner-lank .solo .sololank-text h2:nth-child(1),
-  #summoner-lank .free .freelank-text h2:nth-child(1){
+  #summoner-rank .solo .solorank-text h2:nth-child(1),
+  #summoner-rank .free .freerank-text h2:nth-child(1){
     display: none;
   }
-  #summoner-lank .solo .sololank-text h2:nth-of-type(2),
-  #summoner-lank .free .freelank-text h2:nth-of-type(2){
+  #summoner-rank .solo .solorank-text h2:nth-of-type(2),
+  #summoner-rank .free .freerank-text h2:nth-of-type(2){
     font-size: 12px;
     margin-bottom: 5px;
   }
@@ -691,8 +691,8 @@
   #summoner-info .summoner-info-text p:nth-of-type(1){
     margin-bottom: 8px;
   }
-  /* summoner-lank 부분 */
-  #summoner-lank{
+  /* summoner-rank 부분 */
+  #summoner-rank{
     width: 100%;
     height: 150px;
     position: relative;
@@ -701,11 +701,11 @@
     transform: translateX(-50%);
     display: flex;
   }
-  #summoner-lank .solo{
+  #summoner-rank .solo{
     border-right: 1px solid #fff;
   }
-  #summoner-lank .solo,
-  #summoner-lank .free{
+  #summoner-rank .solo,
+  #summoner-rank .free{
     width: 400px;
     height: 150px;
     background-color: #E7E7E7;
@@ -716,25 +716,25 @@
     align-items: center;
     text-align: center;
   }
-  #summoner-lank .solo>h2,
-  #summoner-lank .free>h2{
+  #summoner-rank .solo>h2,
+  #summoner-rank .free>h2{
     display: block;
     font-size: 14px;
     margin-top: 5px;
   }
-  #summoner-lank .solo .sololank-img,
-  #summoner-lank .free .freelank-img{
+  #summoner-rank .solo .solorank-img,
+  #summoner-rank .free .freerank-img{
     width: 50px;
     height: 50px;
     border-radius: 25px;
     background-color: #A4A4A4;
   }
-  #summoner-lank .solo .sololank-text h2:nth-child(1),
-  #summoner-lank .free .freelank-text h2:nth-child(1){
+  #summoner-rank .solo .solorank-text h2:nth-child(1),
+  #summoner-rank .free .freerank-text h2:nth-child(1){
     display: none;
   }
-  #summoner-lank .solo .sololank-text h2:nth-of-type(2),
-  #summoner-lank .free .freelank-text h2:nth-of-type(2){
+  #summoner-rank .solo .solorank-text h2:nth-of-type(2),
+  #summoner-rank .free .freerank-text h2:nth-of-type(2){
     font-size: 12px;
     margin-bottom: 5px;
   }

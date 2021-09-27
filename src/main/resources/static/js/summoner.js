@@ -1,37 +1,42 @@
+const displayRankInfo = (league) => {
+  const leagueName = league
+  const soloRankImg = $('.solorank-img');
+  soloRankImg.css('background', `url(/images/emblem/${league.tier}.png)`).css('background-size','cover');
+
+  const soloRankTextDiv = $('.solorank-text');
+  soloRankTextDiv.append($(`<h2>${league.tier} ${league.rank}</h2>`));
+  soloRankTextDiv.append($(`<p>${league.leaguePoints} LP</p>`));
+  const soloWins = league.wins;
+  const soloLosses = league.losses;
+  let _winRate = soloWins*100/(soloWins+soloLosses);
+  _winRate = _winRate.toString().slice(0, 4);
+  soloRankTextDiv.append($(`<p>${soloWins}승 ${soloLosses}패 (${_winRate}%)</p>`));
+}
+
+
 window.onload = () => {
-  let summonerName = window.location.pathname;
-  summonerName = summonerName.replace('/search/', '').replaceAll('+','%20');
+  let summonerName = window.location.pathname.replace('/search/', '').replaceAll('+','%20');
   const url = `/api/get/summoner/by-name/${summonerName}`;
   fetch(url).then((response) => {
     return response.json();
-  }).then((data) => {
-    console.log(data);
-    const profileIcon = $('#summonerIcon');
-    profileIcon.css('background', `url(/images/profileicon/${data.profileIconId}.png)`);
+  }).then((summonerData) => {
+    console.log(summonerData);
+    const summonerIcon = $('.summoner-icon');
+    summonerIcon.css('background', `url(/images/profileicon/${summonerData.profileIconId}.png)`).css('background-size','cover');
 
-    const summonerLevel = $('#summonerLevel');
-    summonerLevel.html(`${data.level}`);
+    const summonerLevel = $(`<p>Lv <span>${summonerData.level}</span></p>`)
+    summonerIcon.append(summonerLevel);
 
-    const summonerName = $('#summonerName');
-    summonerName.html(`${data.name}`);
+    const summonerInfoTextDiv = $('.summoner-info-text');
+    summonerInfoTextDiv.append($(`<h2>${summonerData.name}</h2>`));
+    summonerInfoTextDiv.append($(`<p>${summonerData.soloLeague.tier} ${summonerData.soloLeague.rank}</p>`));
+    summonerInfoTextDiv.append($(`<p>랭킹 <span>111,111위</span> (상위 <span>22%</span>위)</p>`));
+    
+    if (summonerData.soloLeague !== null)
+      displayRankInfo(summonerData.soloLeague);
 
-    const soloRankImg = $('#soloRankImg');
-    soloRankImg.css('background', `url(/images/emblem/${data.soloLeague.tier}.png)`).css('background-size','cover');
-
-    const tierAndRank = $('#tierAndRank');
-    tierAndRank.html(`${data.soloLeague.tier} ${data.soloLeague.rank}`);
-
-    const leaguePoints = $('#leaguePoint');
-    leaguePoints.html(`${data.soloLeague.leaguePoints} LP`);
-
-    const soloWinsAndLosses = $('#soloWinsAndLosses');
-    const soloWins = data.soloLeague.wins;
-    const soloLosses = data.soloLeague.losses;
-    const winRate = $('#winRate');
-    let _winRate = soloWins*100/(soloWins+soloLosses);
-    soloWinsAndLosses.html(`${soloWins}승 ${soloLosses}패`);
-    _winRate = _winRate.toString().slice(0, 4);
-    winRate.html(`${_winRate}`);
+    if (summonerData.teamLeague !== null)
+      displayRankInfo(summonerData.teamLeague);
 
   });
 }

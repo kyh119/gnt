@@ -61,27 +61,42 @@
 /* 헤더 - 로그인 */
 .login{
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: relative;
 }
 .login h1{
-  display: none;
-}
-.login h2{
-  width: 110px;
+  width: 40px;
   height: 40px;
   background: #FF7A00;
   border-radius: 20px;
   position: absolute;
-  top: 10px;
-  right: 1%;
-  font-size: 21px;
-  letter-spacing: 0.07em;
+  top: 15px;
+  right: 10px;
+  font-size: 20px;
   text-align: center;
   line-height: 40px;
+  display: none;
+}
+.login h1>a{
+  color: #fff;
+}
+.login h2{
+  width: 100px;
+  height: 42px;
+  background: #FF7A00;
+  border-radius: 20px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  margin-right: 10px;
 }
 .login h2>a {
   color: white;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 45px;
 }
 /* 헤더- 메뉴 */
 .nav{
@@ -110,16 +125,18 @@
 /* 배너부분 */
 #banner{
   width: 100%;
-  height: 800px;
+  height: 300px;
+  position: relative;
+  top: 150px;
 }
 /* 배너-로고  */
 #banner .logo-area{
-  width: 500px;
-  height: 150px;
+  /* width: 500px;
+  height: 150px; */
   position: absolute;
-  top: 35%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
 }
 #banner .logo-area h1{
   font-style: normal;
@@ -132,12 +149,12 @@
 
 /* 배너 - 검색창 */
 #banner .search-area{
-  width: 600px;
+  width: 650px;
   height: 50px;
   position: absolute;
-  top: 50%;
+  top: 180px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,0);
   box-sizing: border-box;
   box-shadow: 0 0 2px #7B7777;
   border-radius: 20px;
@@ -191,7 +208,7 @@
 
 /* 반응형 모바일사이즈 */
 
-@media screen and (max-width:480px){
+@media screen and (max-width:425px){
   
   .nav{
     display: none;
@@ -227,20 +244,7 @@
     position: relative;
   }
   .login h1{
-    width: 50px;
-    height: 50px;
-    background: #FF7A00;
-    border-radius: 50px;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 55px;
     display: block;
-  }
-  .login h1>a{
-    color: #fff;
   }
   .login h2{
     display: none;
@@ -251,8 +255,8 @@
     height: 90px;
   }
   #banner .logo-area h1{
-    font-size: 90px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 180px;
   }
   /* 모바일 검색창 */
   #banner .search-area{
@@ -264,7 +268,7 @@
     height: 50px;
   }  
 }
-@media screen and (min-width:480px) and (max-width:767px){
+@media screen and (min-width:426px) and (max-width:767px){
   /* 메뉴 */
   .nav{
     display: none;
@@ -300,27 +304,23 @@
     position: relative;
   }
   .login h1{
-    width: 50px;
-    height: 50px;
-    background: #FF7A00;
-    border-radius: 50px;
-    position: absolute;
-    top: 10px;
-    right: 1%;
-    font-size: 30px;
-    text-align: center;
-    line-height: 55px;
     display: block;
-  }
-  .login h1>a{
-    color: #fff;
   }
   .login h2{
     display: none;
   }
+  /* 배너 */
+  #banner .logo-area{
+    width: 400px;
+    height: 100px;
+  }
+  #banner .logo-area h1{
+    font-size: 90px;
+    line-height: 170px;
+  }
   /*  검색창 */
   #banner .search-area{
-    width: 400px;
+    width: 390px;
     height: 50px;
   }
   #banner .search-area .search-input{
@@ -331,6 +331,14 @@
 
 
 @media screen and (min-width:768px) and (max-width:1023px){
+  #banner .logo-area{
+    width: 400px;
+    height: 90px;
+  }
+  #banner .logo-area h1{
+    font-size: 100px;
+    line-height: 180px;
+  }
   #banner .search-area{
     width: 550px;
   }
