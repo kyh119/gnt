@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.web.dto.summoner.League;
 import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.summoner.Summoner;
-import com.sun.deploy.net.HttpResponse;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;

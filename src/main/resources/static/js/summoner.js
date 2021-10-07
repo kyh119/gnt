@@ -13,7 +13,6 @@ const displayRankInfo = (league) => {
   soloRankTextDiv.append($(`<p>${soloWins}승 ${soloLosses}패 (${_winRate}%)</p>`));
 }
 
-
 window.onload = () => {
   let summonerName = window.location.pathname.replace('/search/', '').replaceAll('+','%20');
   const url = `/api/get/summoner/by-name/${summonerName}`;
@@ -37,6 +36,5 @@ window.onload = () => {
 
     if (summonerData.teamLeague !== null)
       displayRankInfo(summonerData.teamLeague);
-
   });
 }
