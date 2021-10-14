@@ -15,7 +15,7 @@ const displayRankInfo = (league) => {
 
 window.onload = () => {
   let summonerName = window.location.pathname.replace('/search/', '').replaceAll('+','%20');
-  const url = `/api/get/summoner/by-name/${summonerName}`;
+  const url = `/api/summoner/by-name/${summonerName}`;
   fetch(url).then((response) => {
     return response.json();
   }).then((summonerData) => {

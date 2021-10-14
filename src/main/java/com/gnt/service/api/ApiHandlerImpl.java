@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@PropertySource("/home/ec2-user/app/application-api-key.properties")
+@PropertySource("application-api-key.properties")
 @Component
 public class ApiHandlerImpl implements ApiHandler {
 

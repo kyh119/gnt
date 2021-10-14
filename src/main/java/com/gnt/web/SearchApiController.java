@@ -16,12 +16,12 @@ import java.util.List;
 public class SearchApiController {
     private final SearchService searchService;
 
-    @GetMapping("/api/get/summoner/by-name/{summonerName}")
+    @GetMapping("/api/summoner/by-name/{summonerName}")
     public SummonerDto getSummonerJsonByName(@PathVariable String summonerName) {
         return searchService.getSummonerByName(summonerName);
     }
 
-    @GetMapping("/api/get/matches/by-name/{summonerName}")
+    @GetMapping("/api/matches/by-name/{summonerName}")
     public List<Match> getMatchListJsonByName(@PathVariable String summonerName, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "count", defaultValue = "1") int count) {
         return searchService.getMatchListByName(summonerName, start, count);
     }
