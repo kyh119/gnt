@@ -1,3 +1,5 @@
+
+
 const displayRankInfo = (league) => {
   const leagueName = league
   const soloRankImg = $('.solorank-img');
@@ -12,8 +14,17 @@ const displayRankInfo = (league) => {
   _winRate = _winRate.toString().slice(0, 4);
   soloRankTextDiv.append($(`<p>${soloWins}승 ${soloLosses}패 (${_winRate}%)</p>`));
 }
-
+let v,l,cdn;
 window.onload = () => {
+  fetch("https://ddragon.leagueoflegends.com/realms/kr.json").then((response) => {
+    return response.json();
+  }).then((realmData) => {
+    console.log(realmData)
+    v = realmData.v;
+    l = realmData.l;
+    cdn = realmData.cdn;
+  });
+
   let summonerName = window.location.pathname.replace('/search/', '').replaceAll('+','%20');
   const url = `/api/summoner/by-name/${summonerName}`;
   fetch(url).then((response) => {
@@ -21,7 +32,7 @@ window.onload = () => {
   }).then((summonerData) => {
     console.log(summonerData);
     const summonerIcon = $('.summoner-icon');
-    summonerIcon.css('background', `url(/images/profileicon/${summonerData.profileIconId}.png)`).css('background-size','cover');
+    summonerIcon.css('background', `url(${cdn}/${v}/img/profileicon/${summonerData.profileIconId}.png)`).css('background-size','cover');
 
     const summonerLevel = $(`<p>Lv <span>${summonerData.level}</span></p>`)
     summonerIcon.append(summonerLevel);
