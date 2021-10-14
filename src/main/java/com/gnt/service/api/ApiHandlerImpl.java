@@ -22,7 +22,7 @@ import java.util.Map;
 @Component
 public class ApiHandlerImpl implements ApiHandler {
 
-    @Value("${api-key}")
+    @Value("${api.key}")
     private String apiKey;
 
     private String uri;
