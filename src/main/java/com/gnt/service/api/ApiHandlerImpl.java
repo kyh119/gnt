@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.web.dto.summoner.League;
 import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.summoner.Summoner;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -16,8 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@PropertySource("/home/ec2-user/app/application-api-key.properties")
 @Component
 public class ApiHandlerImpl implements ApiHandler {
+
+    @Value("${api-key}")
+    private String apiKey;
 
     private String uri;
     private ObjectMapper mapper;
