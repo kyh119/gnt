@@ -14,8 +14,9 @@ const displayRankInfo = (league) => {
   _winRate = _winRate.toString().slice(0, 4);
   soloRankTextDiv.append($(`<p>${soloWins}승 ${soloLosses}패 (${_winRate}%)</p>`));
 }
-let v,l,cdn;
+
 window.onload = () => {
+  let v,l,cdn;
   fetch("https://ddragon.leagueoflegends.com/realms/kr.json").then((response) => {
     return response.json();
   }).then((realmData) => {
