@@ -10,6 +10,7 @@ import java.util.List;
 public interface ApiHandler {
     String krUri = "https://kr.api.riotgames.com";
     String asiaUri = "https://asia.api.riotgames.com";
+    String apiKey = "RGAPI-3e4360e3-7dac-4e54-9d05-803abb1039d7";
 
     Summoner getSummonerByName(String summonerName);
     List<League> getLeagueListBySummonerId(String id);
