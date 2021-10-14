@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@PropertySource("application-api-key.properties")
+@PropertySource("classpath:/application-api-key.properties")
 @Component
 public class ApiHandlerImpl implements ApiHandler {
 
