@@ -131,20 +131,14 @@
 }
 /* 배너-로고  */
 #banner .logo-area{
-  /* width: 500px;
-  height: 150px; */
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
 }
-#banner .logo-area h1{
-  font-style: normal;
-  font-weight: normal;
-  font-size: 130px;
-  line-height: 150px;
-  text-align: center;
-  color: #FF7A00;
+#banner .logo-area img{
+  width: 700px;
+  height: 300px;
 }
 
 /* 배너 - 검색창 */

@@ -22,9 +22,6 @@ import java.util.Map;
 @Component
 public class ApiHandlerImpl implements ApiHandler {
 
-    @Value("${api.key}")
-    private String apiKey;
-
     private String uri;
     private ObjectMapper mapper;
     public ApiHandlerImpl() {
