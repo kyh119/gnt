@@ -5,7 +5,6 @@ target/
 !**/src/test/**/target/
 application-oauth.properties
 application-dev.properties
-application-api-key.properties
 Constants.java
 
 ### STS ###
