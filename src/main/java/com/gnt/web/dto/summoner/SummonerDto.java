@@ -25,7 +25,7 @@ public class SummonerDto {
         this.id = summoner.getId();
         this.puuid = summoner.getPuuid();
         this.revisionDate = summoner.getRevisionDate();
-        for (League league : summoner.getLeagueList()) {
+        /*for (League league : summoner.getLeagueList()) {
             switch (league.getQueueType()) {
                 case "RANKED_SOLO_5x5":
                     this.soloLeague = league;
@@ -34,6 +34,6 @@ public class SummonerDto {
                     this.teamLeague = league;
                     break;
             }
-        }
+        }*/
     }
 }

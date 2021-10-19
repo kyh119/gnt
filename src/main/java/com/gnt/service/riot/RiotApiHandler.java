@@ -1,4 +1,4 @@
-package com.gnt.service.api;
+package com.gnt.service.riot;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class ApiHandler {
+public class RiotApiHandler {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final String krUri = "https://kr.api.riotgames.com";
@@ -28,7 +28,7 @@ public class ApiHandler {
 
     private String uri;
     private ObjectMapper mapper;
-    public ApiHandler() {
+    public RiotApiHandler() {
         this.mapper = new ObjectMapper();
     }
 
@@ -74,7 +74,7 @@ public class ApiHandler {
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
-            logger.error("소환사 검색 실패");
+            logger.error("API Request NOT Available");
         }
         return "error";
     }

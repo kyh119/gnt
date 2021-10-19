@@ -1,6 +1,7 @@
 package com.gnt.service.search;
 
-import com.gnt.service.api.ApiHandler;
+import com.gnt.domain.summoner.SummonerRepository;
+import com.gnt.service.riot.RiotApiHandler;
 import com.gnt.web.dto.match.Match;
 import com.gnt.domain.summoner.Summoner;
 import com.gnt.web.dto.summoner.SummonerDto;
@@ -13,13 +14,15 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
-public class SearchService {
+public class SummonerService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final ApiHandler apiHandler;
+    private final RiotApiHandler riotApiHandler;
+    private final SummonerRepository summonerRepository;
 
     public SummonerDto getSummonerByName(String summonerName) {
         try {
@@ -28,17 +31,22 @@ public class SearchService {
             logger.warn(e.getMessage());
             logger.warn("인코딩 오류");
         }
-        Summoner summoner = apiHandler.getSummonerByName(summonerName);
-        summoner.setLeagueList(apiHandler.getLeagueListBySummonerId(summoner.getId()));
+        Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
+        try {
+            Optional<Summoner> optionalSummoner = summonerRepository.findById(summoner.getPuuid());
+        } catch (Exception e) {
+            logger.warn(e.getMessage());
+        }
+        //summoner.setLeagueList(riotApiHandler.getLeagueListBySummonerId(summoner.getId()));
         return new SummonerDto(summoner);
     }
 
     public List<Match> getMatchListByName(String summonerName, int start, int count) {
         ArrayList<Match> matchList = new ArrayList<>();
-        Summoner summoner = apiHandler.getSummonerByName(summonerName);
-        List<String> idList = apiHandler.getMatchIdListByPuuid(summoner.getPuuid(), start, count);
+        Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
+        List<String> idList = riotApiHandler.getMatchIdListByPuuid(summoner.getPuuid(), start, count);
         for (String id : idList)
-            matchList.add(apiHandler.getMatchByMatchId(id));
+            matchList.add(riotApiHandler.getMatchByMatchId(id));
         return matchList;
     }
 }

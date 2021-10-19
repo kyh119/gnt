@@ -1,6 +1,6 @@
 package com.gnt.web;
 
-import com.gnt.service.search.SearchService;
+import com.gnt.service.search.SummonerService;
 import com.gnt.web.dto.match.Match;
 import com.gnt.web.dto.summoner.SummonerDto;
 import lombok.RequiredArgsConstructor;
@@ -14,16 +14,16 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class SearchApiController {
-    private final SearchService searchService;
+    private final SummonerService summonerService;
 
     @GetMapping("/api/summoner/by-name/{summonerName}")
     public SummonerDto getSummonerJsonByName(@PathVariable String summonerName) {
-        return searchService.getSummonerByName(summonerName);
+        return summonerService.getSummonerByName(summonerName);
     }
 
     @GetMapping("/api/matches/by-name/{summonerName}")
     public List<Match> getMatchListJsonByName(@PathVariable String summonerName, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "count", defaultValue = "1") int count) {
-        return searchService.getMatchListByName(summonerName, start, count);
+        return summonerService.getMatchListByName(summonerName, start, count);
     }
 
 }
