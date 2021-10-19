@@ -10,4 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Ban {
+    private int championId;
+    private int pickTurn;
 }
