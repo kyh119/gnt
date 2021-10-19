@@ -1,24 +1,27 @@
-package com.gnt.web.dto.summoner;
+package com.gnt.domain.summoner;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import java.util.List;
-
-@Setter @Getter
+@Getter
 @NoArgsConstructor
+@Entity
 public class Summoner {
 
     private String accountId;
     private String name;
     private String id;
-    private String puuid;
-    private Integer profileIconId;
-    private Long summonerLevel;
-    private Long revisionDate;
-    private List<League> leagueList;
 
+    @Id
+    private String puuid;
+    private int profileIconId;
+    private long summonerLevel;
+    private long revisionDate;
+
+    @Builder
     public Summoner(String accountId, String name, String id, String puuid, Integer profileIconId, Long summonerLevel, Long revisionDate) {
         this.accountId = accountId;
         this.name = name;

@@ -1,7 +1,8 @@
 package com.gnt.web.dto.summoner;
 
+import com.gnt.domain.summoner.League;
+import com.gnt.domain.summoner.Summoner;
 import lombok.Getter;
-import java.util.List;
 
 @Getter
 public class SummonerDto {

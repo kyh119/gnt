@@ -1,5 +1,7 @@
 package com.gnt.web;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +13,8 @@ import java.net.URLEncoder;
 @Controller
 public class SearchController {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @GetMapping(value = "/search")
     public String search(@RequestParam(value = "userName") String userName) {
         try {
@@ -19,7 +23,7 @@ public class SearchController {
                 userName = sb.insert(1, " ").toString();
             userName = URLEncoder.encode(userName, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            System.out.println("인코딩 오류");
+            logger.warn("인코딩 오류");
         }
         return "redirect:/search/" + userName;
     }
