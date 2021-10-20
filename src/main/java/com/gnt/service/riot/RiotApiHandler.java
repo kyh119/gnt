@@ -7,8 +7,8 @@ import com.gnt.Constants;
 import com.gnt.domain.summoner.League;
 import com.gnt.web.dto.match.Match;
 import com.gnt.domain.summoner.Summoner;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;

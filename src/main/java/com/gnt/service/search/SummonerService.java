@@ -7,15 +7,14 @@ import com.gnt.service.riot.RiotApiHandler;
 import com.gnt.web.dto.match.Match;
 import com.gnt.domain.summoner.Summoner;
 import com.gnt.web.dto.summoner.SummonerDto;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @RequiredArgsConstructor
