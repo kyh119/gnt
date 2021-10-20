@@ -19,7 +19,7 @@ public class LeagueDto {
         this.tier = league.getTier();
         this.rank = league.getRank();
         this.leaguePoints = league.getLeaguePoints();
-        this.wins = league.getLeaguePoints();
+        this.wins = league.getWins();
         this.losses = league.getLosses();
         this.hotStreak = league.isHotStreak();
         this.freshBlood = league.isFreshBlood();

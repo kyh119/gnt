@@ -26,6 +26,21 @@ public class SummonerService {
     private final SummonerRepository summonerRepository;
     private final LeagueRepository leagueRepository;
 
+    public SummonerDto getOrCreateSummonerByName(String summonerName) {
+        try {
+            summonerName = URLEncoder.encode(summonerName, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            logger.warn(e.getMessage());
+            logger.warn("인코딩 오류");
+        }
+        Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
+
+        return new SummonerDto(
+                summonerRepository.findById(summoner.getId())
+                        .orElseGet(() -> createNewSummoner(summoner))
+        );
+    }
+
     private Summoner createNewSummoner(Summoner summoner) {
 
         logger.debug("create new summoner");
@@ -56,27 +71,5 @@ public class SummonerService {
                 .build();
     }
 
-    public SummonerDto getOrCreateSummonerByName(String summonerName) {
-        try {
-            summonerName = URLEncoder.encode(summonerName, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            logger.warn(e.getMessage());
-            logger.warn("인코딩 오류");
-        }
-        Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
 
-        return new SummonerDto(
-                summonerRepository.findById(summoner.getId())
-                        .orElseGet(() -> createNewSummoner(summoner))
-        );
-    }
-
-    public List<Match> getMatchListByName(String summonerName, int start, int count) {
-        ArrayList<Match> matchList = new ArrayList<>();
-        Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
-        List<String> idList = riotApiHandler.getMatchIdListByPuuid(summoner.getPuuid(), start, count);
-        for (String id : idList)
-            matchList.add(riotApiHandler.getMatchByMatchId(id));
-        return matchList;
-    }
 }
