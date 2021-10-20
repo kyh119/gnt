@@ -1,19 +1,15 @@
-package com.gnt.web.dto.match;
+package com.gnt.domain.match;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Team {
-    private List<Ban> bans;
-    private Objectives objectives;
-    private int teamId;
-    private boolean win;
+public class Objective {
+    private boolean first;
+    private int kills;
 }

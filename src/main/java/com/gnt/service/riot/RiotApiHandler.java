@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.Constants;
 import com.gnt.domain.summoner.League;
-import com.gnt.web.dto.match.Match;
+import com.gnt.domain.match.Match;
 import com.gnt.domain.summoner.Summoner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

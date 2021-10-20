@@ -1,7 +1,7 @@
 package com.gnt.web;
 
 import com.gnt.service.search.MatchService;
-import com.gnt.web.dto.match.Match;
+import com.gnt.domain.match.Match;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

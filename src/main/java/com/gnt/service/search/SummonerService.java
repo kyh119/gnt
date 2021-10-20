@@ -4,7 +4,6 @@ import com.gnt.domain.summoner.League;
 import com.gnt.domain.summoner.LeagueRepository;
 import com.gnt.domain.summoner.SummonerRepository;
 import com.gnt.service.riot.RiotApiHandler;
-import com.gnt.web.dto.match.Match;
 import com.gnt.domain.summoner.Summoner;
 import com.gnt.web.dto.summoner.SummonerDto;
 import lombok.RequiredArgsConstructor;

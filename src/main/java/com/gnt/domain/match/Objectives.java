@@ -1,4 +1,4 @@
-package com.gnt.web.dto.match;
+package com.gnt.domain.match;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
