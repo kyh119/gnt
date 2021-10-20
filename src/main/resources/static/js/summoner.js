@@ -27,7 +27,7 @@ window.onload = () => {
   });
 
   let summonerName = window.location.pathname.replace('/search/', '').replaceAll('+','%20');
-  const url = `/api/summoner/by-name/${summonerName}`;
+  const url = `/api/summoner/v1/by-name/${summonerName}`;
   fetch(url).then((response) => {
     return response.json();
   }).then((summonerData) => {

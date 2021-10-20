@@ -28,6 +28,7 @@ public class RiotApiHandler {
 
     private String uri;
     private ObjectMapper mapper;
+
     public RiotApiHandler() {
         this.mapper = new ObjectMapper();
     }
@@ -96,7 +97,7 @@ public class RiotApiHandler {
         try {
             List<Map<String, Object>> list = mapper.readValue(getJson(uri), new TypeReference<List<Map<String, Object>>>() {
             });
-            for (Map<String,Object> map : list) {
+            for (Map<String, Object> map : list) {
                 leagueList.add(mapper.readValue(mapper.writeValueAsString(map), League.class));
             }
             return leagueList;
