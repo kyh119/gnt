@@ -5,10 +5,10 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gnt.Constants;
 import com.gnt.domain.summoner.League;
-import com.gnt.web.dto.match.Match;
+import com.gnt.domain.match.Match;
 import com.gnt.domain.summoner.Summoner;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -28,6 +28,7 @@ public class RiotApiHandler {
 
     private String uri;
     private ObjectMapper mapper;
+
     public RiotApiHandler() {
         this.mapper = new ObjectMapper();
     }
@@ -96,7 +97,7 @@ public class RiotApiHandler {
         try {
             List<Map<String, Object>> list = mapper.readValue(getJson(uri), new TypeReference<List<Map<String, Object>>>() {
             });
-            for (Map<String,Object> map : list) {
+            for (Map<String, Object> map : list) {
                 leagueList.add(mapper.readValue(mapper.writeValueAsString(map), League.class));
             }
             return leagueList;

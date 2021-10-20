@@ -1,5 +1,6 @@
 package com.gnt.web.dto.match;
 
+import com.gnt.domain.match.Team;
 import lombok.Getter;
 
 import java.util.List;

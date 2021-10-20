@@ -1,8 +1,7 @@
 package com.gnt.web;
 
-import com.gnt.service.search.SummonerService;
-import com.gnt.web.dto.match.Match;
-import com.gnt.web.dto.summoner.SummonerDto;
+import com.gnt.service.search.MatchService;
+import com.gnt.domain.match.Match;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,17 +12,12 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class SearchApiController {
-    private final SummonerService summonerService;
+public class MatchApiController {
 
-    @GetMapping("/api/summoner/by-name/{summonerName}")
-    public SummonerDto getSummonerJsonByName(@PathVariable String summonerName) {
-        return summonerService.getSummonerByName(summonerName);
-    }
+    private final MatchService matchService;
 
-    @GetMapping("/api/matches/by-name/{summonerName}")
+    @GetMapping("/api/matches/v1/by-name/{summonerName}")
     public List<Match> getMatchListJsonByName(@PathVariable String summonerName, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "count", defaultValue = "1") int count) {
-        return summonerService.getMatchListByName(summonerName, start, count);
+        return matchService.getMatchListByName(summonerName, start, count);
     }
-
 }
