@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -32,6 +31,7 @@ public class SummonerService {
         } catch (UnsupportedEncodingException e) {
             logger.warn(e.getMessage());
             logger.warn("인코딩 오류");
+            return null;
         }
         Summoner summoner = riotApiHandler.getSummonerByName(summonerName);
 
