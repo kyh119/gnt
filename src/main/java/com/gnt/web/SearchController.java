@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,11 +17,6 @@ public class SearchController {
 
     @GetMapping(value = "/search")
     public String search(@RequestParam(value = "userName") String userName) {
-        return getString(userName);
-    }
-
-    @PatchMapping(value = "/search")
-    public String update(@RequestParam(value = "userName") String userName) {
         return getString(userName);
     }
 
