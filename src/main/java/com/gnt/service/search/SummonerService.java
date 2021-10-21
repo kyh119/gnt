@@ -9,6 +9,7 @@ import com.gnt.web.dto.summoner.SummonerDto;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
@@ -40,7 +41,8 @@ public class SummonerService {
         );
     }
 
-    private Summoner createNewSummoner(Summoner summoner) {
+    @Modifying
+    Summoner createNewSummoner(Summoner summoner) {
 
         logger.debug("create new summoner");
 

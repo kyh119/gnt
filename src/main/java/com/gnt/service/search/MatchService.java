@@ -3,8 +3,10 @@ package com.gnt.service.search;
 import com.gnt.domain.match.Info;
 import com.gnt.domain.match.InfoRepository;
 import com.gnt.domain.summoner.Summoner;
+import com.gnt.domain.summoner.SummonerRepository;
 import com.gnt.service.riot.RiotApiHandler;
 import com.gnt.domain.match.Match;
+import com.gnt.web.dto.match.MatchDto;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +21,18 @@ public class MatchService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final RiotApiHandler riotApiHandler;
+    private final SummonerRepository summonerRepository;
     private final InfoRepository infoRepository;
+
+    public List<MatchDto> getMatchListByName(String summonerName) {
+        return null;
+    }
+
+    public Info getLastInfoByName(String summonerName) {
+        Summoner summoner = summonerRepository.findByName(summonerName);
+        String lastMatchId = infoRepository.findLastMatchIdByPuuid(summoner.getPuuid());
+        return null;
+    }
 
     public List<Match> getMatchListByName(String summonerName, int start, int count) {
         ArrayList<Match> matchList = new ArrayList<>();
