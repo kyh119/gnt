@@ -47,6 +47,7 @@ public class SummonerService {
         logger.debug("create new summoner");
 
         List<League> leagueList = riotApiHandler.getLeagueListBySummonerId(summoner.getId());
+        summoner = summonerRepository.save(summoner);
         for (League league : leagueList) {
             leagueRepository.save(League.builder()
                     .queueType(league.getQueueType())
@@ -56,7 +57,7 @@ public class SummonerService {
                     .wins(league.getWins())
                     .losses(league.getLosses())
                     .hotStreak(league.isHotStreak())
-                    .summoner(summonerRepository.save(summoner))
+                    .summoner(summoner)
                     .freshBlood(league.isFreshBlood())
                     .build());
         }
