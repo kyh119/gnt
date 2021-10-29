@@ -90,19 +90,11 @@
 }
 .header-top .logo{
   margin-left: 20px;
+  width: 150px;
+  height: 60px;
 }
-.header-top .logo a{
-  font-style: normal;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 25px;
-  color: #FF7A00;
-}
-.header-top .logo span{
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFAA5C;
+.header-top .logo img{
+  width: 150px;
 }
 /* 검색창 */
 .header-top .search-area{
@@ -442,13 +434,15 @@
 /* 모바일 사이즈 */
 @media screen and (max-width:425px){
   #header .header-top .logo{
-    font-size: 22px;
+    width: 130px;
+    height: 50px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0;
   }
-  #header .header-top .logo span{
-    display: none;
+  #header .header-top .logo img{
+    width: 130px;
   }
   #header .header-top .search-area{
     display: none;
@@ -625,7 +619,7 @@
 /* 태블릿사이즈 */
 @media screen and (min-width:426px) and (max-width:767px){
   #header .header-top .logo{
-    font-size: 22px;
+    margin: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
