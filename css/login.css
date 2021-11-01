@@ -18,16 +18,12 @@
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 170px;
-  height: 60px;
+  width: 230px;
+  height: 90px;
   
 }
-.login_container h1 a{
-  font-size: 50px;
-  line-height: 60px;
-  text-align: center;
-  color: #FF7A00;
-  text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+.login_container h1 img{
+  width: 230px;
 }
 /* 로그인폼 */
 .login_container form{

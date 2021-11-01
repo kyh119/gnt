@@ -131,20 +131,15 @@
 }
 /* 배너-로고  */
 #banner .logo-area{
-  /* width: 500px;
-  height: 150px; */
+  width: 550px;
+  height: 250px;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
 }
-#banner .logo-area h1{
-  font-style: normal;
-  font-weight: normal;
-  font-size: 130px;
-  line-height: 150px;
-  text-align: center;
-  color: #FF7A00;
+#banner .logo-area img{
+  width: 550px;
 }
 
 /* 배너 - 검색창 */
@@ -152,7 +147,7 @@
   width: 650px;
   height: 50px;
   position: absolute;
-  top: 180px;
+  top: 230px;
   left: 50%;
   transform: translate(-50%,0);
   box-sizing: border-box;
@@ -252,16 +247,16 @@
   /* 모바일 배너 */
   #banner .logo-area{
     width: 300px;
-    height: 90px;
+    height: 120px;
   }
-  #banner .logo-area h1{
-    font-size: 70px;
-    line-height: 180px;
+  #banner .logo-area img{
+    width: 300px;
   }
   /* 모바일 검색창 */
   #banner .search-area{
     width: 300px;
     height: 50px;
+    top: 130px;
   }
   #banner .search-area .search-input{
     width: 200px;
@@ -312,16 +307,17 @@
   /* 배너 */
   #banner .logo-area{
     width: 400px;
-    height: 100px;
+    height: 150px;
+    top: 40px;
   }
-  #banner .logo-area h1{
-    font-size: 90px;
-    line-height: 170px;
+  #banner .logo-area img{
+    width: 400px;
   }
   /*  검색창 */
   #banner .search-area{
     width: 390px;
     height: 50px;
+    top: 200px;
   }
   #banner .search-area .search-input{
     width: 300px;
@@ -335,11 +331,15 @@
     width: 400px;
     height: 90px;
   }
-  #banner .logo-area h1{
-    font-size: 100px;
-    line-height: 180px;
+  #banner .logo-area{
+    width: 450px;
+    height: 180px;
+    top: 40px;
   }
-  #banner .search-area{
+  #banner .logo-area img{
+    width: 450px;
+  }
+    #banner .search-area{
     width: 550px;
   }
   #banner .search-area .search-input{
