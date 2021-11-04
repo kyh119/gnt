@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -21,6 +22,14 @@ public class GnimtyApplicationTests {
     @Test
     public void hello() {
         assertThat(summonerRepository.findById("yNl1AToO5W7q2K8uXkU8UUQW2iEJ4PF1SbPVvAw_4Rkfdw").get().getSummonerLevel()).isGreaterThan(60L);
+    }
+
+    @DisplayName("hello")
+    @Test
+    @Transactional
+    public void 티어_확인() {
+        assertThat(summonerRepository.findById("yNl1AToO5W7q2K8uXkU8UUQW2iEJ4PF1SbPVvAw_4Rkfdw").get()
+                .getLeagueList().get(0).getTier()).isEqualTo("GRANDMASTER");
     }
 
 

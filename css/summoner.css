@@ -439,31 +439,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#content-wrap .content{
-  width: 800px;
-  height: 120px ;
-  background-color: #ED8B85;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* game-stats */
-#content-wrap .content .game-stats{
-  width: 15%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #content-wrap .content .game-stats p{
   font-size: 11px;
   margin: 2px 0;
-}
-#content-wrap .content .game-stats .game-result{
-  font-size: 13px;
-  font-weight: bold;
-  color: #e30000;
 }
 #content-wrap .content .game-stats p{
   font-size: 11px;
@@ -564,8 +542,56 @@
 #content-wrap .content .players .team .summoner .team-summoner-name{
   font-size: 11px;
 }
+/* game-stats */
+#content-wrap .content .game-stats{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 승리시 content CSS */
+#content-wrap .content.win{
+  width: 800px;
+  height: 120px ;
+  background-color: #a2cff0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content-wrap .content.win .game-stats .game-result{
+  font-size: 13px;
+  font-weight: bold;
+  color: #0047ff;
+}
 /* history- button */
-#content-wrap .content .history-button{
+#content-wrap .content.win .history-button{
+  width: 3%;
+  height: 100%;
+  background-color: #6cb4e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content-wrap .content.win .history-button{
+  color: #3070bc;
+}
+/* 패배시 content CSS */
+#content-wrap .content.loss{
+  width: 800px;
+  height: 120px ;
+  background-color: #ED8B85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content-wrap .content.loss .game-stats .game-result{
+  font-size: 13px;
+  font-weight: bold;
+  color: #e30000;
+}
+#content-wrap .content.loss .history-button{
   width: 3%;
   height: 100%;
   background-color: #D96059;
@@ -573,11 +599,9 @@
   justify-content: center;
   align-items: center;
 }
-#content-wrap .content .history-button{
+#content-wrap .content.loss .history-button{
   color: #971C1C;
 }
-/* 승리시 CSS변경 */
-
 /* 미디어쿼리 */
 /* 모바일 사이즈 */
 @media screen and (max-width:425px){
