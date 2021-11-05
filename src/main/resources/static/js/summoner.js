@@ -1,5 +1,3 @@
-
-
 const displayRankInfo = (league, name) => {
   const rankImg = $(`.${name}rank-img`);
   rankImg.css('background', `url(/images/emblem/${league.tier}.png)`).css('background-size','cover');
@@ -52,4 +50,6 @@ window.onload = () => {
     else
       $('.freerank-img').css('background', `url(/images/emblem/UNRANKED.png)`).css('background-size','cover');
   });
+
+
 }
