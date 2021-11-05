@@ -45,11 +45,11 @@ window.onload = () => {
     if (summonerData.soloLeague !== null)
       displayRankInfo(summonerData.soloLeague,'solo');
     else
-      $('.solorank-img').css('background', `url(/images/emblem/unranked.png)`).css('background-size','cover');
+      $('.solorank-img').css('background', `url(/images/emblem/UNRANKED.png)`).css('background-size','cover');
 
     if (summonerData.teamLeague !== null)
       displayRankInfo(summonerData.teamLeague,'free');
     else
-      $('.freerank-img').css('background', `url(/images/emblem/unranked.png)`).css('background-size','cover');
+      $('.freerank-img').css('background', `url(/images/emblem/UNRANKED.png)`).css('background-size','cover');
   });
 }
