@@ -18,16 +18,12 @@
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 170px;
-  height: 60px;
-  
+  width: 230px;
+  height: 90px;
+
 }
-.login_container h1 a{
-  font-size: 50px;
-  line-height: 60px;
-  text-align: center;
-  color: #FF7A00;
-  text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+.login_container h1 img{
+  width: 230px;
 }
 /* 로그인폼 */
 .login_container form{
@@ -62,7 +58,7 @@
   background: #FFFFFF;
   border: 1px solid #7B7777;
   box-sizing: border-box;
-  
+
 }
 .login_container form label{
   font-size: 15px;
@@ -87,7 +83,7 @@
   height: 50px;
   font-size: 15px;
   color: #fff;
-  background-color: #ff7b005b;  
+  background-color: #ff7b005b;
   border: none;
   border-radius: 10px;
 }
@@ -130,10 +126,10 @@
   height: 60px;
   border-radius: 30px;
 }
-.sns_login .sns h2:nth-of-type(1){ 
+.sns_login .sns h2:nth-of-type(1){
   background: #FFE816;
 }
-.sns_login .sns h2:nth-of-type(2){ 
+.sns_login .sns h2:nth-of-type(2){
   background: #1F41BA;
 }
 .sns_login .sns h2:nth-of-type(3){
