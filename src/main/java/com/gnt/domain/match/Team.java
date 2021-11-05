@@ -27,6 +27,7 @@ public class Team {
     @Transient
     private Objectives objectives;
 
+    @Column(name = "team_id")
     private int teamId;
     private boolean win;
 }
