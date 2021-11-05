@@ -1,23 +1,22 @@
 
 
-const displayRankInfo = (league) => {
-  const leagueName = league
-  const soloRankImg = $('.solorank-img');
-  soloRankImg.css('background', `url(/images/emblem/${league.tier}.png)`).css('background-size','cover');
+const displayRankInfo = (league, name) => {
+  const rankImg = $(`.${name}rank-img`);
+  rankImg.css('background', `url(/images/emblem/${league.tier}.png)`).css('background-size','cover');
 
-  const soloRankTextDiv = $('.solorank-text');
-  soloRankTextDiv.append($(`<h2>${league.tier} ${league.rank}</h2>`));
-  soloRankTextDiv.append($(`<p>${league.leaguePoints} LP</p>`));
-  const soloWins = league.wins;
-  const soloLosses = league.losses;
-  let _winRate = soloWins*100/(soloWins+soloLosses);
+  const rankTextDiv = $(`.${name}rank-text`);
+  rankTextDiv.append($(`<h2>${league.tier} ${league.rank}</h2>`));
+  rankTextDiv.append($(`<p>${league.leaguePoints} LP</p>`));
+  const wins = league.wins;
+  const losses = league.losses;
+  let _winRate = wins*100/(wins+losses);
   _winRate = _winRate.toString().slice(0, 4);
-  soloRankTextDiv.append($(`<p>${soloWins}승 ${soloLosses}패 (${_winRate}%)</p>`));
+  rankTextDiv.append($(`<p>${wins}승 ${losses}패 (${_winRate}%)</p>`));
 }
 
 window.onload = () => {
   let v,l,cdn;
-  fetch("https://ddragon.leagueoflegends.com/realms/kr.json").then((response) => {
+  fetch("http://ddragon.leagueoflegends.com/realms/kr.json").then((response) => {
     return response.json();
   }).then((realmData) => {
     console.log(realmData)
@@ -35,7 +34,7 @@ window.onload = () => {
     const summonerIcon = $('.summoner-icon');
     summonerIcon.css('background', `url(${cdn}/${v}/img/profileicon/${summonerData.profileIconId}.png)`).css('background-size','cover');
 
-    const summonerLevel = $(`<p>Lv <span>${summonerData.level}</span></p>`)
+    const summonerLevel = $(`<p>Lv <span>${summonerData.summonerLevel}</span></p>`)
     summonerIcon.append(summonerLevel);
 
     const summonerInfoTextDiv = $('.summoner-info-text');
@@ -44,9 +43,13 @@ window.onload = () => {
     summonerInfoTextDiv.append($(`<p>랭킹 <span>111,111위</span> (상위 <span>22%</span>위)</p>`));
     
     if (summonerData.soloLeague !== null)
-      displayRankInfo(summonerData.soloLeague);
+      displayRankInfo(summonerData.soloLeague,'solo');
+    else
+      $('.solorank-img').css('background', `url(/images/emblem/unranked.png)`).css('background-size','cover');
 
     if (summonerData.teamLeague !== null)
-      displayRankInfo(summonerData.teamLeague);
+      displayRankInfo(summonerData.teamLeague,'free');
+    else
+      $('.freerank-img').css('background', `url(/images/emblem/unranked.png)`).css('background-size','cover');
   });
 }
