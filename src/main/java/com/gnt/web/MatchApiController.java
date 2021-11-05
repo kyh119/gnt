@@ -17,7 +17,9 @@ public class MatchApiController {
     private final MatchService matchService;
 
     @GetMapping("/api/matches/v1/by-name/{summonerName}")
-    public List<Match> getMatchListJsonByName(@PathVariable String summonerName, @RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "count", defaultValue = "1") int count) {
+    public List<Match> getMatchListJsonByName(@PathVariable String summonerName,
+                                              @RequestParam(value = "start", defaultValue = "0") int start,
+                                              @RequestParam(value = "count", defaultValue = "1") int count) {
         return matchService.getMatchListByName(summonerName, start, count);
     }
 
