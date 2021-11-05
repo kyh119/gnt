@@ -9,8 +9,8 @@
   position: absolute;
   top: 20px;
   left: 5px;
-  width: 60px; 
-  height: 55px; 
+  width: 60px;
+  height: 55px;
   cursor:pointer;
   z-index: 1;
   display: none;
@@ -43,7 +43,7 @@
 }
 .ham.active .bar2 {
   transform: rotate(45deg);
-  
+
 }
 .ham.active .bar3 {
   margin-top: -4px;
@@ -56,7 +56,7 @@
 /* 헤더 */
 #header{
   width: 100%;
-  height: 110px;
+  height: 120px;
 }
 /* 헤더 - 로그인 */
 .login{
@@ -127,18 +127,19 @@
   width: 100%;
   height: 300px;
   position: relative;
-  top: 150px;
+  margin-top: 150px;
 }
 /* 배너-로고  */
 #banner .logo-area{
+  width: 550px;
+  height: 250px;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
 }
 #banner .logo-area img{
-  width: 700px;
-  height: 300px;
+  width: 550px;
 }
 
 /* 배너 - 검색창 */
@@ -146,7 +147,7 @@
   width: 650px;
   height: 50px;
   position: absolute;
-  top: 180px;
+  top: 230px;
   left: 50%;
   transform: translate(-50%,0);
   box-sizing: border-box;
@@ -203,7 +204,7 @@
 /* 반응형 모바일사이즈 */
 
 @media screen and (max-width:425px){
-  
+
   .nav{
     display: none;
   }
@@ -246,21 +247,21 @@
   /* 모바일 배너 */
   #banner .logo-area{
     width: 300px;
-    height: 90px;
+    height: 120px;
   }
-  #banner .logo-area h1{
-    font-size: 70px;
-    line-height: 180px;
+  #banner .logo-area img{
+    width: 300px;
   }
   /* 모바일 검색창 */
   #banner .search-area{
     width: 300px;
     height: 50px;
+    top: 130px;
   }
   #banner .search-area .search-input{
     width: 200px;
     height: 50px;
-  }  
+  }
 }
 @media screen and (min-width:426px) and (max-width:767px){
   /* 메뉴 */
@@ -306,16 +307,17 @@
   /* 배너 */
   #banner .logo-area{
     width: 400px;
-    height: 100px;
+    height: 150px;
+    top: 40px;
   }
-  #banner .logo-area h1{
-    font-size: 90px;
-    line-height: 170px;
+  #banner .logo-area img{
+    width: 400px;
   }
   /*  검색창 */
   #banner .search-area{
     width: 390px;
     height: 50px;
+    top: 200px;
   }
   #banner .search-area .search-input{
     width: 300px;
@@ -329,9 +331,13 @@
     width: 400px;
     height: 90px;
   }
-  #banner .logo-area h1{
-    font-size: 100px;
-    line-height: 180px;
+  #banner .logo-area{
+    width: 450px;
+    height: 180px;
+    top: 40px;
+  }
+  #banner .logo-area img{
+    width: 450px;
   }
   #banner .search-area{
     width: 550px;

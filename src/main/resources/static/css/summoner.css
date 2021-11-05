@@ -9,8 +9,8 @@
   position: absolute;
   top: 20px;
   left: 5px;
-  width: 60px; 
-  height: 55px; 
+  width: 60px;
+  height: 55px;
   cursor:pointer;
   z-index: 2;
   display: none;
@@ -43,7 +43,7 @@
 }
 .ham.active .bar2 {
   transform: rotate(45deg);
-  
+
 }
 .ham.active .bar3 {
   margin-top: -4px;
@@ -56,7 +56,7 @@
   top: 0;
   width: 150px;
   height: 260px;
-  background-color: rgb(246, 132, 39); 
+  background-color: rgb(246, 132, 39);
   z-index: 1;
 }
 .hamnav ul{
@@ -90,19 +90,11 @@
 }
 .header-top .logo{
   margin-left: 20px;
+  width: 150px;
+  height: 60px;
 }
-.header-top .logo a{
-  font-style: normal;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 25px;
-  color: #FF7A00;
-}
-.header-top .logo span{
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  color: #FFAA5C;
+.header-top .logo img{
+  width: 150px;
 }
 /* 검색창 */
 .header-top .search-area{
@@ -247,7 +239,7 @@
   width: 380px;
   height: 130px;
   position: relative;
-  top: 50px;
+  margin-top: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -294,7 +286,7 @@
   width: 800px;
   height: 150px;
   position: relative;
-  top: 100px;
+  margin-top: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -321,8 +313,7 @@
   width: 70px;
   height: 70px;
   border-radius: 35px;
-  background: url('/images/emblem/unranked.png');
-  background-size: cover;
+  background-color: #A4A4A4;
 }
 #summoner-rank .solo .solorank-text h2,
 #summoner-rank .free .freerank-text h2{
@@ -349,7 +340,7 @@
   width: 800px;
   height: 190px;
   position: relative;
-  top: 150px;
+  margin-top: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -375,7 +366,7 @@
   width: 800px;
   height: 150px;
   background-color: #fff;
-  
+
 }
 #gamemod .gamemod-contents .mostchamp{
   width: 400px;
@@ -439,17 +430,191 @@
   color: #ff3434;
 }
 
+/* Contents 부분 */
+#content-wrap{
+  width: 800px;
+  height: auto;
+  position: relative;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#content-wrap .content .game-stats p{
+  font-size: 11px;
+  margin: 2px 0;
+}
+#content-wrap .content .game-stats p{
+  font-size: 11px;
+}
+/* gamesetting-info */
+#content-wrap .content .gamesetting-info{
+  width: 14%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#content-wrap .content .gamesetting-info .champion-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #D8D3D3;
+}
+#content-wrap .content .gamesetting-info .spell{
+  width: 22px;
+  height: 22px;
+  background-color: #D8D3D3;
+}
+#content-wrap .content .gamesetting-info .rune{
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #D8D3D3;
+}
+#content-wrap .content .gamesetting-info .spell:nth-child(2),
+#content-wrap .content .gamesetting-info .rune:nth-child(4){
+  margin-bottom: 2px;
+}
+/* kda */
+#content-wrap .content .kda{
+  width: 15%;
+  text-align: center;
+}
+#content-wrap .content .kda p{
+  margin: 7px 0;
+}
+#content-wrap .content .kda .kda-scroe{
+  font-size: 15px;
+  font-weight: bold;
+}
+#content-wrap .content .kda .kda-ratio{
+  font-size: 12px;
+}
+/* stats */
+#content-wrap .content .stats{
+  width: 15%;
+  font-size: 11px;
+}
+#content-wrap .content .stats p{
+  margin: 7px 0;
+  text-align: center;
+}
+/* itemlist */
+#content-wrap .content .itemlist{
+  width: 13%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#content-wrap .content .itemlist .item{
+  width: 22px;
+  height: 22px;
+  margin: 2px;
+  background-color: #D8D3D3;
+}
+/* players */
+#content-wrap .content .players{
+  width: 25%;
+  height: 100%;
+  display: flex;
+}
+#content-wrap .content .players .team{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#content-wrap .content .players .team .summoner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#content-wrap .content .players .team .summoner .team-champion-img{
+  width: 16px;
+  height: 16px;
+  background-color: #D8D3D3;
+  margin-right: 3px;
+}
+#content-wrap .content .players .team .summoner .team-summoner-name{
+  font-size: 11px;
+}
+/* game-stats */
+#content-wrap .content .game-stats{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 승리시 content CSS */
+#content-wrap .content.win{
+  width: 800px;
+  height: 120px ;
+  background-color: #a2cff0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content-wrap .content.win .game-stats .game-result{
+  font-size: 13px;
+  font-weight: bold;
+  color: #0047ff;
+}
+/* history- button */
+#content-wrap .content.win .history-button{
+  width: 3%;
+  height: 100%;
+  background-color: #6cb4e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content-wrap .content.win .history-button{
+  color: #3070bc;
+}
+/* 패배시 content CSS */
+#content-wrap .content.loss{
+  width: 800px;
+  height: 120px ;
+  background-color: #ED8B85;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content-wrap .content.loss .game-stats .game-result{
+  font-size: 13px;
+  font-weight: bold;
+  color: #e30000;
+}
+#content-wrap .content.loss .history-button{
+  width: 3%;
+  height: 100%;
+  background-color: #D96059;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content-wrap .content.loss .history-button{
+  color: #971C1C;
+}
 /* 미디어쿼리 */
 /* 모바일 사이즈 */
 @media screen and (max-width:425px){
   #header .header-top .logo{
-    font-size: 22px;
+    width: 130px;
+    height: 50px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0;
   }
-  #header .header-top .logo span{
-    display: none;
+  #header .header-top .logo img{
+    width: 130px;
   }
   #header .header-top .search-area{
     display: none;
@@ -459,7 +624,7 @@
   }
   #header .header-bottom .search-area{
     display: block;
-    
+
   }
   #header .header-bottom .nav{
     display: none;
@@ -490,7 +655,7 @@
     width: 45px;
     font-size: 12px;
     line-height: 12px;
-    
+
   }
   /* 소환사정보 텍스트 부분 */
   #summoner-info .summoner-info-text{
@@ -542,8 +707,7 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background: url('/images/emblem/unranked.png');
-    background-size: cover;
+    background-color: #A4A4A4;
   }
   #summoner-rank .solo .solorank-text h2:nth-child(1),
   #summoner-rank .free .freerank-text h2:nth-child(1){
@@ -627,7 +791,7 @@
 /* 태블릿사이즈 */
 @media screen and (min-width:426px) and (max-width:767px){
   #header .header-top .logo{
-    font-size: 22px;
+    margin: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -677,7 +841,7 @@
     width: 45px;
     font-size: 12px;
     line-height: 12px;
-    
+
   }
   /* 소환사정보 텍스트 부분 */
   #summoner-info .summoner-info-text{
@@ -729,8 +893,7 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background: url('/images/emblem/unranked.png');
-    background-size: cover;
+    background-color: #A4A4A4;
   }
   #summoner-rank .solo .solorank-text h2:nth-child(1),
   #summoner-rank .free .freerank-text h2:nth-child(1){

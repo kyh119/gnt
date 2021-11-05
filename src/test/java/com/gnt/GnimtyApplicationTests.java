@@ -29,7 +29,7 @@ public class GnimtyApplicationTests {
     @Transactional
     public void 티어_확인() {
         assertThat(summonerRepository.findById("yNl1AToO5W7q2K8uXkU8UUQW2iEJ4PF1SbPVvAw_4Rkfdw").get()
-                .getLeagueList().get(0).getTier()).isEqualTo("GRANDMASTER");
+                .getLeagueList().get(0).getTier()).isEqualTo("DIAMOND");
     }
 
 
