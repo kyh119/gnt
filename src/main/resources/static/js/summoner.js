@@ -51,5 +51,4 @@ window.onload = () => {
       $('.freerank-img').css('background', `url(/images/emblem/UNRANKED.png)`).css('background-size','cover');
   });
 
-
 }
